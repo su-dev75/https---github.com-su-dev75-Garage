@@ -184,7 +184,7 @@ nav {
   margin: 30px 0 30px;
   font-weight: 600;
   text-transform: uppercase;
-  color: var(--oxford-blue-1);
+  color: var(--secondary-color);
   font-size: 1.4rem;
   position:relative;
   text-decoration: underline 3px solid var(--primary-color);
@@ -225,16 +225,14 @@ nav {
 }
 .service-card h3 {
   text-align: center;
+  color: var(--secondary-color);
 }
 
-.card_container .btn {
-   margin-inline: auto;
-}
 
 @media (min-width: 575px) {
 
   /*--Services--*/
-    .service .section-title { margin-block-end: 30px;
+    .service .services-title { margin-block-end: 30px;
    }
 
   .service-list {
@@ -290,7 +288,7 @@ nav {
 @media (min-width: 1200px) {
   /*--Services--*/
 
-  .service .section-title { max-width: 700px; }
+  .service .services-title { max-width: 700px; }
 
   .service-list { margin-block-end: 70px; }
 
@@ -325,5 +323,17 @@ nav {
   .service-card{
     margin-left: 50px;
     margin-right: 50px;
+  }
+  .services .services-title{
+    font-size: 2rem;
+  }
+  .services .services-description {
+    font-size: 1.5rem;
+  }
+  .service-card .h3 {
+    font-size: 1.7rem;
+  }
+  .service-card .card-text{
+    font-size: 1.3rem;
   }
 }
