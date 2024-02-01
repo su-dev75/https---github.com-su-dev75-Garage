@@ -39,25 +39,14 @@
   margin: auto;
   padding: 5rem 1rem;
 }
-/*
-.section__subheader {
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--primary-color);
-}
-*/
+
 .section__header {
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 3.5rem;
   color: var(--secondary-color-dark);
 }
-/*
-.section__description {
-  margin-bottom: 2rem;
-  color: var(--text-light);
-}
-*/
+
 .btn {
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
@@ -115,7 +104,6 @@ nav {
   top: 0;
   width: 100%;
   max-width: var(--max-width);
-  margin: auto;
   z-index: 9;
 }
 .nav__bar {
@@ -128,7 +116,7 @@ nav {
 }
 
 .nav__menu__btn {
-  font-size: 2rem;
+  font-size: 1rem;
   color: var(--white);
   cursor: pointer;
 }
@@ -244,6 +232,43 @@ nav {
 }
 @media (min-width: 768px) {
 
+  /*--Header--*/
+
+    nav {
+    padding: 2rem 1rem;;  
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+  }
+
+  .nav__bar {
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .nav__menu__btn {
+    display: none;
+  }
+
+  .nav__links {
+    padding: 0;
+    width: unset;
+    position: static;
+    transform: none;
+    flex-direction: row;
+    background-color: transparent;
+  }
+
+  .header {
+    padding-top: 0;
+  }
+
+  .header__content h1 {
+    font-size: 3rem;
+  }
+
   /*--Services--*/
     .service-banner {
     display: block;
@@ -286,9 +311,11 @@ nav {
 }
 
 @media (min-width: 1200px) {
+
+
+
   /*--Services--*/
 
-  .service .services-title { max-width: 700px; }
 
   .service-list { margin-block-end: 70px; }
 
@@ -315,6 +342,12 @@ nav {
 }
 
 @media (min-width: 1400px) {
+
+  .nav__links {
+    font-size: 1.5rem;
+    
+  }
+
   .service-banner{
     width: max-content;
     align-items: center;
