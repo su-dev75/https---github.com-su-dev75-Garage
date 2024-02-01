@@ -194,5 +194,136 @@ nav {
   font-size: 1rem;
   font-weight: 400;
   margin:20px auto;
-  padding:10px;
+  padding:20px;
+}
+
+.service-banner {
+  display: none;
+  
+}
+.service { 
+ text-align: center;
+}
+
+.service-list {
+  gap: 0;
+  margin-block-end: 40px;
+}
+
+.service-card .card-icon {
+  max-width: max-content;
+  margin-inline: auto;
+  margin-block-end: 24px;
+}
+
+.service-card .card-text {
+  max-width: var(--max-width);
+  font-size: 1rem;
+  font-weight: 400;
+  margin:20px auto;
+  padding:20px;
+}
+.service-card h3 {
+  text-align: center;
+}
+
+.card_container .btn {
+   margin-inline: auto;
+}
+
+@media (min-width: 575px) {
+
+  /*--Services--*/
+    .service .section-title { margin-block-end: 30px;
+   }
+
+  .service-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-block-end: 40px;
+  }
+}
+@media (min-width: 768px) {
+
+  /*--Services--*/
+    .service-banner {
+    display: block;
+    position: relative;
+  }
+
+  .service-list { grid-template-columns: repeat(3, 1fr); }
+
+  .service-banner img {
+    position: absolute;
+    top: 0;
+    left: -25%;
+    margin-block-start: 15%;
+    width: 150%;
+    transform-origin: top;
+  }
+}
+
+@media (min-width: 992px ){
+
+    /*--Services--*/
+
+  .service-card .card-text {
+    padding-inline: 25px;
+    line-height: 1.45;
+    margin-block-end: 15px;
+  }
+
+  .service-list li:nth-child(-2n+3) { margin-block-start: 90px; }
+
+  .service-list li:nth-child(4) { margin-inline-end: 60px; }
+
+  .service-list li:nth-child(6) { margin-inline-start: 60px; }
+
+  .service-banner img {
+    left: -55%;
+    margin-block-start: -30%;
+    width: 210%;
+  }
+}
+
+@media (min-width: 1200px) {
+  /*--Services--*/
+
+  .service .section-title { max-width: 700px; }
+
+  .service-list { margin-block-end: 70px; }
+
+  .service-list li:nth-child(2) .card-text {
+    padding-inline: 50px;
+  }
+
+  .service-list li:nth-child(-2n+3) {
+    margin-block-start: 110px;
+  }
+
+  .service-list li:is(:nth-child(1), :nth-child(6)) {
+    margin-inline-start: 75px;
+  }
+
+  .service-list li:is(:nth-child(3), :nth-child(4)) {
+    margin-inline-end: 75px;
+  }
+
+  .service-banner img {
+    width: max-content;
+    left: -41%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .service-banner{
+    width: max-content;
+    align-items: center;
+  }
+
+  .service-card{
+    margin-left: 50px;
+    margin-right: 50px;
+  }
 }
