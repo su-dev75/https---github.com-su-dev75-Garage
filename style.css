@@ -169,7 +169,7 @@ nav {
   margin: 10px 0 0;
   padding: 20px 20px 40px;
 }
-.services-title {
+.sections-title {
   text-align: center;
   margin: 100px 0 50px;
   font-weight: 600;
@@ -179,7 +179,7 @@ nav {
   position:relative;
   text-decoration: underline 3px solid var(--primary-color);
 }
-.services-description {
+.sections-description {
   max-width: var(--max-width);
   font-size: 1rem;
   font-weight: 400;
@@ -217,13 +217,73 @@ nav {
   text-align: center;
   color: var(--secondary-color);
 }
+/*--Group voitures--*/
 
+
+.voitures_group .container{
+  padding-inline: 0;
+}
+
+.img-holder {
+  aspect-ratio: var(--width) / var(--height);
+  background-color: var(--light-gray);
+  overflow: hidden;
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.group {
+  display: block;
+  align-items: center;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-snap-type: inline mandatory;
+  padding: 20px;
+}
+
+
+.voitures_group .sections-title { margin-block-end: 24px; }
+
+.item-card { position: relative; }
+
+.item-card .card-content {
+  background-color: var(--white);
+  max-width: 90%;
+  padding: 30px 20px;
+  margin-block-start: -60px;
+  margin-inline: auto;
+  position: relative;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+.item-card .card-title { margin-block-end: 10px;
+  text-transform: uppercase;
+ }
+
+.item-card .card-btn {
+  padding: 0.50rem 1rem;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--primary-color);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+
+/*--Responsivz--*/
 
 @media (min-width: 575px) {
 
 
   /*--Services--*/
-    .service .services-title { margin-block-end: 30px;
+    .service .sections-title { margin-block-end: 30px;
    }
 
   .service-list {
@@ -231,6 +291,13 @@ nav {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     margin-block-end: 40px;
+  }
+
+  /*--Voitures group--*/
+
+  .group {
+    display: block;
+    padding: 20px;
   }
 }
 @media (min-width: 768px) {
@@ -297,6 +364,12 @@ nav {
     width: 150%;
     transform-origin: top;
   }
+
+  /*--Voitures group--*/
+  .group{
+    display: flex;
+    padding: 20px;
+  }
 }
 
 @media (min-width: 992px ){
@@ -310,7 +383,9 @@ nav {
     font-weight: 600;
   }
     /*--Services--*/
-
+    .sections-title {
+      font-weight: 500;
+    }
   .service-card .card-text {
     padding-inline: 25px;
     line-height: 1.45;
@@ -328,7 +403,15 @@ nav {
     margin-block-start: -30%;
     width: 210%;
   }
-}
+
+
+  /*--Voitures group--*/
+   .group{
+    display: flex;
+    padding: 20px;
+  }
+  }
+
 
 @media (min-width: 1200px) {
 
@@ -356,7 +439,9 @@ nav {
 
   /*--Services--*/
 
-
+  .sections-title {
+    font-weight: 600;
+  }
   .service-list { margin-block-end: 70px; }
 
   .service-list li:nth-child(2) .card-text {
@@ -378,6 +463,12 @@ nav {
   .service-banner img {
     width: max-content;
     left: -41%;
+  }
+
+  /*Voitures group--*/
+   .group{
+    display: flex;
+    padding: 20px;
   }
 }
 
@@ -416,10 +507,11 @@ nav {
     margin-left: 50px;
     margin-right: 50px;
   }
-  .services .services-title{
+  .sections-title{
     font-size: 2rem;
+    font-weight: 700;
   }
-  .services .services-description {
+  .sections-description {
     font-size: 1.5rem;
   }
   .service-card .h3 {
@@ -427,5 +519,11 @@ nav {
   }
   .service-card .card-text{
     font-size: 1.3rem;
+  }
+
+  /*Voitures group--*/
+  .group{
+    display: flex;
+    padding: 20px;
   }
 }
