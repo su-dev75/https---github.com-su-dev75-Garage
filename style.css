@@ -219,11 +219,6 @@ nav {
 }
 /*--Group voitures--*/
 
-
-.voitures_group .container{
-  padding-inline: 0;
-}
-
 .img-holder {
   aspect-ratio: var(--width) / var(--height);
   background-color: var(--light-gray);
@@ -237,16 +232,25 @@ nav {
 }
 
 .group {
-  display: block;
+  display: flex;
   align-items: center;
   gap: 30px;
   overflow-x: auto;
   scroll-snap-type: inline mandatory;
-  padding: 20px;
+  padding-block-end: 20px;
+}
+.group-item {
+    min-width: 100%;
+    scroll-snap-align: start;
+}
+.group::-webkit-scrollbar { 
+  height: 16px; 
 }
 
+.voitures_group .container{
+  padding-inline: 0;
+}
 
-.voitures_group .sections-title { margin-block-end: 24px; }
 
 .item-card { position: relative; }
 
@@ -264,19 +268,174 @@ nav {
   text-transform: uppercase;
  }
 
-.item-card .card-btn {
-  padding: 0.50rem 1rem;
-  font-size: 1rem;
-  color: var(--white);
+.voitures_group .btn-v {
+  padding: 0.75rem 1.5rem;
   background-color: var(--primary-color);
+  color: var(--white);
+  max-width: max-content;
+  font-size: 1rem;
+  text-transform: uppercase;
   outline: none;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 5px;
   transition: 0.3s;
   cursor: pointer;
+  margin-inline: auto;
+}
+
+/*--Avis--*/
+.testimonial{
+  background-color: var(--extra-light);
+
+}
+.sections-soubtitle{
+  text-align: center;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--secondary-color-dark);
+  font-size: 1.2rem;
+  position:relative; 
+}
+
+.testimonial__container {
+  text-align: center;
+}
+.swiper-wrapper {
+  padding: 20px;
+}
+.swiper {
+  width: 100%;
+  margin-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.testimonial__card {
+  max-width: 600px;
+  margin: auto;
+}
+
+.testimonial__card img {
+  max-width: 100px;
+  margin: auto;
+  margin-bottom: 1rem;
+  border-radius: 100%;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial__card p {
+  margin-bottom: 1rem;
+  color: var(--secondary-color-dark);
+}
+
+.testimonial__card h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+/*--Contact--*/
+
+
+.contact-sections {
+  background-color: var(--light-gray);
+  padding:20px;
+}
+
+.contact form {
+  width: 100%;
+}
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: var(--white);
+  padding: 20px 10px 40px;
+  width: 100%;
+  margin: 0 auto 40px;
+  border-radius: 15px;
+  max-width: var(--max-wrapper);
+  position: relative;
 }
 
 
+.contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+}
+
+.form-left,
+.form-right {
+  width: 100%;
+}
+.col {
+  margin-bottom: 1rem;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  display: inline-block;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 150px;
+  padding:10px;
+}
+
+
+.contact-form input {
+  height: 2rem;
+  padding: 0 10px;
+}
+
+.btn-v {
+   padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+  max-width: max-content;
+  font-size: 1rem;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+  margin-inline: auto;
+}
+
+.hide{
+  display:none;
+}
 /*--Responsivz--*/
 
 @media (min-width: 575px) {
@@ -295,10 +454,16 @@ nav {
 
   /*--Voitures group--*/
 
-  .group {
-    display: block;
-    padding: 20px;
-  }
+  .container {
+    max-width: 540px;
+    width: 100%;
+    margin-inline: auto;
+}
+  .group-item {
+    min-width: calc(50% - 15px);
+    scroll-snap-align: start;
+}
+
 }
 @media (min-width: 768px) {
 
@@ -366,9 +531,13 @@ nav {
   }
 
   /*--Voitures group--*/
+
+  .container {
+    max-width: 720px;
+  }
   .group{
     display: flex;
-    padding: 20px;
+    padding-block-end: 20px;
   }
 }
 
@@ -406,11 +575,80 @@ nav {
 
 
   /*--Voitures group--*/
-   .group{
+
+  .container {
+    max-width: 960px;
+  }
+  
+  .group { overflow-x: visible; }
+
+  .group-item { min-width: calc(33.33% - 20px); }
+
+  /*--Contact--*/
+
+   .contact-sections {
+    padding:20px 60px;
+  }
+
+  .contact-form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    gap: 70px;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .contact {
+    padding: 40px;
+  }
+
+  .contact-form-left {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    padding: 20px;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
   }
+
+  .contact-form-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
+
+  .contact-form-left,
+  .contact-form-right {
+    width: 48%;
+  }
+   
+
+}
+
 
 
 @media (min-width: 1200px) {
@@ -466,10 +704,10 @@ nav {
   }
 
   /*Voitures group--*/
-   .group{
-    display: flex;
-    padding: 20px;
+  .container {
+    max-width: 1140px;
   }
+
 }
 
 @media (min-width: 1400px) {
@@ -522,8 +760,5 @@ nav {
   }
 
   /*Voitures group--*/
-  .group{
-    display: flex;
-    padding: 20px;
-  }
+
 }

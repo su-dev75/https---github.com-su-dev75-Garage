@@ -162,56 +162,131 @@
           <li class="group-item">
              <div class="item-card">
                 <figure class="card-banner img-holder" style="--width: 350; --height: 406;">
-                  <img src="./assets/img/garage.png" width="350" height="406" loading="lazy" alt="voitures"
+                  <img src="./assets/img/vintages.jpg" width="350" height="406" loading="lazy" alt="voitures"
                     class="img-cover">
                 </figure>
 
                 <div class="card-content">
                   <h3 class="h3 card-title">Vintage</h3>
-
-                  <a href="#" class="card-btn">
-                    <span>Plus d'info</span>
-                  </a>
                 </div>
               </div>
           </li>
           <li class="group-item">
              <div class="item-card">
                 <figure class="card-banner img-holder" style="--width: 350; --height: 406;">
-                  <img src="./assets/img/voiture.png" width="350" height="406" loading="lazy" alt="voitures"
+                  <img src="./assets/img/linconturnable.jpg" width="350" height="406" loading="lazy" alt="voitures"
                     class="img-cover">
                 </figure>
 
                 <div class="card-content">
                   <h3 class="h3 card-title">L'inconturnable</h3>
-
-                  <a href="#" class="card-btn">
-                    <span>Plus d'info</span>
-                  </a>
                 </div>
               </div>
           </li>
           <li class="group-item">
              <div class="item-card">
                 <figure class="card-banner img-holder" style="--width: 350; --height: 406;">
-                  <img src="./assets/img/voitures.png" width="350" height="406" loading="lazy" alt="voitures"
+                  <img src="./assets/img/modernes.jpg" width="350" height="406" loading="lazy" alt="voitures"
                     class="img-cover">
                 </figure>
 
                 <div class="card-content">
                   <h3 class="h3 card-title">Moderne</h3>
-
-                  <a href="#" class="card-btn">
-                    <span>Plus d'info</span>
-                  </a>
                 </div>
               </div>
           </li>
         </ul>
+        <a href="#" class="btn-v">
+          <span class="span">Nos voitures</span>
+        </a>
        </div>
+    </section>
+    <section class="testimonial">
+      <h2 class="sections-title">Les Avis</h2>
+      <h3 class="sections-soubtitle">Parce que votre avis compte pour nous</h3>
 
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="testimonial__card">
+              <img src="./assets/img/face-3.png" alt="testimonial" />
+              <p>
+                I couldn't believe my eyes when I got my car back from the
+                service. It looked and drove like it had just rolled off the
+                assembly line. The team did an incredible job, and I'm a
+                customer for life!
+              </p>
+              <h4>- John T.</h4>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial__card">
+              <img src="./assets/img/face-2.png" alt="testimonial" />
+              <p>
+                I've been bringing my car here for years, and they never
+                disappoint. Their attention to detail and commitment to quality
+                service is unmatched. My car always feels brand new after a
+                visit.
+              </p>
+              <h4>- Sarah P.</h4>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial__card">
+              <img src="./assets/img/face-1.png" alt="testimonial" />
+              <p>
+                As a car enthusiast, I'm extremely particular about who touches
+                my prized possession. Their team's expertise and passion for
+                cars truly shine through in their work. My car has never looked
+                better.
+              </p>
+              <h4>- David S.</h4>
+            </div>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
     </section>
 
+    <section class="contact-sections" id="contact">
+      <h2 class="sections-title">Contact</h2>
+      <div class="contact">
+        <h3 class="sections-soubtitle">Vous avez une question ? Contactez-nous !</h3>
+
+        <form method="POST" id="addContact">
+          <div class="contact-form">
+            <div class="form-left">
+              <div class="col ">
+                 <input type="text"  minlength="3" maxlength="25" placeholder="Nom" autocomplete= "off" aria-label="First name">
+              </div>
+              <div class="col">
+                 <input type="text"  minlength="3" maxlength="25" placeholder="Prénom" autocomplete="off" aria-label="Last name">
+              </div>
+              <div class="col">
+                 <input type="text"  minlength="9" maxlength="15" placeholder="Téléphone" autocomplete="off" aria-label="phone">
+              </div>
+                <div class="col">
+                 <input type="text" minlength="20" maxlength="40" placeholder="E-mail" autocomplete="off" aria-label="email">
+              </div>
+            </div>
+            <div class="form-right">
+              <div class="col">
+                 <input type="text"  minlength="20" maxlength="40" placeholder="Sujet" autocomplete="off" aria-label="sujet">
+              </div>
+              <div class="col">
+                <textarea name="mesage" placeholder="Message" autocomplete="off" rows="12" cols="60"></textarea>
+            </div>
+            </div>
+          </div>
+          <a href="#" class="btn-v">
+            <span class="span">Envoyer</span>
+          </a>
+        </form>
+      </div>
+    </section>
     <!--Js-->
    
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
