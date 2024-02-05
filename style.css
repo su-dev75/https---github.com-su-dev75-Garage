@@ -2,32 +2,36 @@
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 /*-- Variables--*/
-
-:root {    
---international-orange-engineering: hsl(1, 91%, 37%);
---cadet-blue-creyola: hsl(222, 14%, 69%);
---oxford-blue-1: hsl(222, 47%, 15%);
---oxford-blue-2: hsl(222, 44%, 14%);
---oxford-blue-3: hsl(222, 50%, 11%);
---sonic-silver: hsl(0, 0%, 44%);
---space-cadet: hsl(222, 44%, 18%);
---pastel-pink: hsl(1, 53%, 75%);
---eerie-black: hsl(0, 0%, 15%);
---light-gray: hsl(0, 0%, 80%);
---white: hsl(0, 0%, 100%);
-}
-
+  
 :root {
+
+  /*-- Colors --*/
+
   --primary-color: #da042a;
   --primary-color-dark: #c00427;
   --secondary-color: hsl(222, 44%, 18%);
-  --secondary-color-dark:  hsl(222, 44%, 14%);
+  --oxford-blue-1: hsl(222, 47%, 15%);
+  --oxford-blue-2: hsl(222, 44%, 14%);
+  --oxford-blue-3: hsl(222, 50%, 11%);
+  --cadet-blue-creyola: hsl(222, 14%, 69%);
   --text-light: #6b7280;
+  --light-gray: hsl(0, 0%, 80%);
   --extra-light: #f8f7fd;
-  --white: #ffffff;
+  --white: #fff;
   --max-width: 1200px;
-}
 
+/*--- Typography --*/
+--fs-1: 3.5rem;
+--fs-2: 3rem;
+--fs-3: 2.4rem;
+--fs-4: 1.8rem;
+--fs-5: 1.4rem;
+--fs-6: 1.2rem;
+
+--fw-400: 400;
+--fw-600: 600;
+--fw-700: 700;
+}
 * {
   padding: 0;
   margin: 0;
@@ -44,7 +48,7 @@
   font-size: 2rem;
   font-weight: 600;
   line-height: 3rem;
-  color: var(--secondary-color-dark);
+  color: var(--oxford-blue-2);
 }
 
 .btn {
@@ -87,7 +91,7 @@ body {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #f3F3F3;
+  background-color: #fdfdfd;
 }
 
 .header {
@@ -112,7 +116,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  background-color: var(--secondary-color-dark);
+  background-color: var(--oxford-blue-2);
 }
 
 .nav__menu__btn {
@@ -130,7 +134,7 @@ nav {
   align-items: center;
   text-transform: uppercase;
   gap: 2rem;
-  background-color: var(--secondary-color-dark);
+  background-color: var(--oxford-blue-2);
   transform: translateY(-100%);
   transition: 0.5s;
   z-index: -1;
@@ -163,7 +167,7 @@ nav {
   color: var(--white);
 }
 
-/*--Services---*/
+/*-- Services ---*/
 
 .sections {
   margin: 10px 0 0;
@@ -217,7 +221,7 @@ nav {
   text-align: center;
   color: var(--secondary-color);
 }
-/*--Group voitures--*/
+/*-- Cars --*/
 
 .img-holder {
   aspect-ratio: var(--width) / var(--height);
@@ -286,22 +290,23 @@ nav {
   margin-inline: auto;
 }
 
-/*--Avis--*/
+/*-- Testimonial --*/
 .testimonial{
-  background-color: var(--extra-light);
+  background-color: var(--light-gray);
 
 }
 .sections-soubtitle{
   text-align: center;
   font-weight: 500;
   text-transform: uppercase;
-  color: var(--secondary-color-dark);
+  color: var(--oxford-blue-2);
   font-size: 1.2rem;
   position:relative; 
 }
 
 .testimonial__container {
   text-align: center;
+
 }
 .swiper-wrapper {
   padding: 20px;
@@ -327,7 +332,7 @@ nav {
 
 .testimonial__card p {
   margin-bottom: 1rem;
-  color: var(--secondary-color-dark);
+  color: var(--oxford-blue-2);
 }
 
 .testimonial__card h4 {
@@ -340,7 +345,7 @@ nav {
 
 
 .contact-sections {
-  background-color: var(--light-gray);
+  background-color: var(--extra-light);
   padding:20px;
 }
 
@@ -436,10 +441,98 @@ nav {
 .hide{
   display:none;
 }
-/*--Responsivz--*/
+
+/*-- Footer --*/
+
+.footer { color: var(--cadet-blue-creyola); }
+
+.footer-top { background-color: var(--secondary-color); }
+
+.footer-bottom {
+  background-color: var(--oxford-blue-1);
+  padding-block: 20px;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 1rem;
+}
+
+
+.footer-top{
+  display: grid;
+  gap: 3rem 2rem;
+  padding: 20px;
+}
+
+.footer-top .logo {
+  margin-bottom: 2rem;
+  padding-left: 20px;
+
+}
+.footer-top .description {
+  color: var(--white);
+  padding: 20px;
+  font-size: 1.2rem;
+}
+.footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-left: 20px;
+}
+
+.footer__socials a {
+  padding: 5px 10px;
+  font-size: 1.3rem;
+  color: var(--white);
+  background-color: var(--oxford-blue-2);
+  border-radius: 100%;
+  transition: 0.3s;
+}
+
+.footer__socials a:hover {
+  color: var(--primary-color);
+  background-color: var(--white);
+}
+
+.footer_col h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--white);
+  text-transform: uppercase;
+  padding-left: 20px;
+  text-decoration: underline 3px solid var(--primary-color);
+}
+
+.footer-list li {
+  margin-bottom: 1rem;
+  padding-left: 20px;
+}
+
+.footer-list p {
+  color: var(--white);
+  transition: 0.3s;
+}
+.footer-list span {
+  color: var(--text-light);
+  transition: 0.3s;
+}
+
+/*-- Responsive --*/
 
 @media (min-width: 575px) {
 
+   :root {
+
+    /*-- typography --*/
+
+    --fs-2: 4rem;
+    --fs-3: 2.8rem;
+    --fs-4: 2rem;
+
+  }
 
   /*--Services--*/
     .service .sections-title { margin-block-end: 30px;
@@ -452,7 +545,7 @@ nav {
     margin-block-end: 40px;
   }
 
-  /*--Voitures group--*/
+  /*-- Cars --*/
 
   .container {
     max-width: 540px;
@@ -464,8 +557,30 @@ nav {
     scroll-snap-align: start;
 }
 
+/*-- Footer --*/
+
+  .footer-top {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer__col:first-child {
+    grid-column: 1/3;
+  }
+  .footer-top .description {
+  color: var(--white);
+  padding: 20px;
+  font-size: 0.80rem;
+}
+
 }
 @media (min-width: 768px) {
+
+  root {
+    /*-- typo--*/
+    --fs-1: 4rem;
+    --fs-2: 5rem;
+    --fs-3: 3.4rem;
+  }
 
    .logo img {
     max-width: 100px;
@@ -530,7 +645,7 @@ nav {
     transform-origin: top;
   }
 
-  /*--Voitures group--*/
+  /*-- Cars--*/
 
   .container {
     max-width: 720px;
@@ -539,9 +654,32 @@ nav {
     display: flex;
     padding-block-end: 20px;
   }
+
+  /*-- Footer --*/
+    .footer-top {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-top .description {
+  color: var(--white);
+  padding: 20px;
+  font-size: 1rem;
+}
+  .footer__col:first-child {
+    max-width: 400px;
+  }
+
+  .copyright { --fs-6: 1.4rem; }
 }
 
 @media (min-width: 992px ){
+
+  root {
+    /*-- typo --*/
+    --fs-2: 4.4rem;
+    --fs-3: 3.8rem;
+    --fs-4: 2.2rem;
+  }
 
   /*--Header--*/
 
@@ -551,7 +689,9 @@ nav {
   ul li {
     font-weight: 600;
   }
+
     /*--Services--*/
+
     .sections-title {
       font-weight: 500;
     }
@@ -574,7 +714,7 @@ nav {
   }
 
 
-  /*--Voitures group--*/
+  /*-- Cars --*/
 
   .container {
     max-width: 960px;
@@ -653,6 +793,14 @@ nav {
 
 @media (min-width: 1200px) {
 
+    :root {
+
+    /*--typo --*/
+
+    --fs-2: 5rem;
+    --fs-3: 4.6rem;
+  }
+
   /*--Header--*/
    .logo img {
     max-width: 150px;
@@ -703,14 +851,27 @@ nav {
     left: -41%;
   }
 
-  /*Voitures group--*/
+  /*-- Cars--*/
   .container {
     max-width: 1140px;
   }
 
+  /*-- Footer --*/
+  
+
+  .footer-bottom {
+    position: relative;
+    padding-block: 30px;
+    z-index: 1;
+  }
 }
 
 @media (min-width: 1400px) {
+
+  root {
+    /*-- typo --*/
+      --fs-2: 6rem;
+  }
 
   /*--Header--*/
 
@@ -759,6 +920,32 @@ nav {
     font-size: 1.3rem;
   }
 
-  /*Voitures group--*/
+  /*-- Footer --*/
 
+  .footer-top .footer_col { padding-inline-start: 20%; }
+
+  .footer_col h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--white);
+  text-transform: uppercase;
+  padding-left: 20px;
+  text-decoration: underline 3px solid var(--primary-color);
+  
+}
+  .footer-top .description {
+  color: var(--text-light);
+  padding: 20px;
+  font-size: 1.5rem;
+}
+.footer-list p {
+  font-size: 1.3rem;
+}
+.footer-list span {
+  font-size: 1.2rem;
+}
+  .copyright {
+  text-align: center;
+  font-size: 1.3rem;
+}
 }
