@@ -292,7 +292,9 @@ nav {
 
 /*-- Testimonial --*/
 .testimonial{
-  background-color: var(--light-gray);
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 20px 40px;
 
 }
 .sections-soubtitle{
@@ -304,22 +306,25 @@ nav {
   position:relative; 
 }
 
-.testimonial__container {
-  text-align: center;
 
-}
 .swiper-wrapper {
   padding: 20px;
+  
 }
 .swiper {
   width: 100%;
   margin-top: 4rem;
   padding-bottom: 4rem;
+  border: 3px solid #6b7280;
 }
-
+.testimonial__card i {
+  color: #da042a;
+  
+}
 .testimonial__card {
   max-width: 600px;
   margin: auto;
+  
 }
 
 .testimonial__card img {
@@ -658,6 +663,7 @@ nav {
   /*-- Footer --*/
     .footer-top {
     grid-template-columns: repeat(3, 1fr);
+    padding: 40px 20px 20px 20px;
   }
 
   .footer-top .description {
@@ -694,6 +700,7 @@ nav {
 
     .sections-title {
       font-weight: 500;
+      margin-top: 20px;
     }
   .service-card .card-text {
     padding-inline: 25px;
@@ -723,6 +730,11 @@ nav {
   .group { overflow-x: visible; }
 
   .group-item { min-width: calc(33.33% - 20px); }
+
+  /*-- Testimonial --*/
+  .swiper {
+    width: 80%;;
+  }
 
   /*--Contact--*/
 
@@ -856,6 +868,16 @@ nav {
     max-width: 1140px;
   }
 
+  /*-- Testimonial --*/
+   .swiper {
+    width: 70%;;
+  }
+
+  /*-- Contact --*/
+
+  .contact-sections {
+    padding: 80px;
+  }
   /*-- Footer --*/
   
 
@@ -920,6 +942,16 @@ nav {
     font-size: 1.3rem;
   }
 
+  /*-- Testimonial --*/
+   .swiper {
+    width: 50%;;
+  }
+  /*-- Contact --*/
+
+  .contact-sections {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
   /*-- Footer --*/
 
   .footer-top .footer_col { padding-inline-start: 20%; }
@@ -948,4 +980,5 @@ nav {
   text-align: center;
   font-size: 1.3rem;
 }
+
 }
