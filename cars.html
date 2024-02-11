@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Garage V.Parrot</title>
+    <link rel="icon" href="assets/img/favicon_parrot .png">
+
+    <!--Link css-->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Links -->
+        <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    
+</head>
+<body>
+    
+        <!-- Header -->
+    <div class="wrapper">
+        <nav style="background-color: var(--oxford-blue-2);">
+        <div class="nav__bar">
+          <div class="logo nav__logo">
+            <a href="#"><img src="assets/img/logo_parrot .png" alt="logo" /></a>
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#voitures">Voitures</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <button class="btn">Connexion Pro</button>
+        </ul>
+      </nav>
+    </div>
+
+    <main>
+        <!-- Section filter-->
+        
+            <section id="cars" class="usedCars-filter">
+                <h1 class="sections-title">Nos voitures d'occasions</h1>
+                <div class="filter-cars">
+                    <article class="filter">
+                        <div class="filter-group">
+                            <h2 class="filter-title">Kilométrage</h2>
+                            <input type="hidden" id="hidden-min-km" value="7000">
+                            <input type="hidden" id="hidden-max-km" value="377000">
+                            <p id="km_show" class="mb-2">7 000km - 377 000km</p>
+                            <div class="km_range" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+                                <div class="ui-slider-range ui-corner-all ui-widget-header" style="width: 100%; left: 0%;">
+                                </div>
+                                <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span>
+                                <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span>
+
+                            </div>
+                            <button type="button" id="reset-button-k" class="btn-filter">Réinitialiser</button>
+                        </div>
+                        <div class="filter-group">
+                            <h2 class="filter-title">Prix</h2>
+                            <input type="hidden" id="hidden-min-price" value="37 000€">
+                            <input type="hidden" id="hidden-max-price" value="157 000€">
+                            <p id="price_show" class="mb-2">37 000€ - 157 000€</p>
+                            <div class="price_range" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+                                <div class="ui-slider-range ui-corner-all ui-widget-header" style="width: 100%; left: 0%;">
+                                </div>
+                                <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span>
+                                <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span>
+                                <button type="button" id="reset-button-k" class="btn-filter">Réinitialiser</button>
+                        </div>
+                        <div class="filter-group">
+                            <h2 class="filter-title">Années</h2>
+                            <input type="hidden" id="hidden-min-year" value="1960">
+                            <input type="hidden" id="hidden-max-year" value="2022">
+                            <p id="year_show" class="mb-2">1950 - 2022</p>
+                            <div class="year_range" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+                                <div class="ui-slider-range ui-corner-all ui-widget-header" style="width: 100%; left: 0%;">
+                                </div>
+                                <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span>
+                                <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span>
+                                <button type="button" id="reset-button-k" class="btn-filter">Réinitialiser</button>
+                        </div>
+                    </article>
+                    <!-- Section cars-->
+                    <article class="data_cars">
+                      <div class="card">
+                        <div class="card-header">
+                             <img src="./assets/img/bmv.png" class="card-img-top" alt="bmv">
+                            <div class="card-body">
+                                <h3 class="card-title">BMW Serie 1</h3>
+                                    <p class="card-text">
+                                        <span>Année: 2016</span><br>
+                                        <span>Diesel</span><br>
+                                        <span>66 500 km</span><br>
+                                        <hr>
+                                    </p>
+                                    <p class="price">26 500 €</p>
+                                    <a href="#" class="btn-car">Détails</a>
+                            </div>
+                        </div>
+                      </div> 
+                      <div class="card">
+                        <div class="card-header">
+                             <img src="./assets/img/mustang.png" class="card-img-top" alt="jeep">
+                            <div class="card-body">
+                                <h3 class="card-title">Mustang Shelby</h3>
+                                    <p class="card-text">
+                                        <span>Année: 202O</span><br>
+                                        <span>Essence</span><br>
+                                        <span>53 500 km</span><br>
+                                        <hr>
+                                    </p>
+                                    <p class="price">63 590 €</p>
+                                    <a href="#" class="btn-car">Détails</a>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="card">   
+                        <div class="card-header">
+                             <img src="./assets/img/bmw.png" class="card-img-top" alt="bmv-serie-3">
+                            <div class="card-body">
+                                <h3 class="card-title">BMW Serie 3</h3>
+                                    <p class="card-text">
+                                        <span>Année: 2015</span><br>
+                                        <span>Disel</span><br>
+                                        <span>53 500 km</span><br>
+                                        <hr>
+                                    </p>
+                                    <p class="price">23 990 €</p>
+                                    <a href="#" class="btn-car">Détails</a>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="card"> 
+                         <div class="card-header">
+                             <img src="./assets/img/ferrari.jpg" class="card-img-top" alt="ferrari">
+                            <div class="card-body">
+                                <h3 class="card-title">FERRARI LUSSO</h3>
+                                    <p class="card-text">
+                                        <span>Année: 2017</span><br>
+                                        <span>Essence</span><br>
+                                        <span>33 500 km</span><br>
+                                        <hr>
+                                    </p>
+                                    <p class="price">212 990 €</p>
+                                    <a href="#" class="btn-car">Détails</a>
+                            </div>
+                        </div>
+                      </div> 
+                      <div class="card">  
+                        <div class="card-header">
+                             <img src="./assets/img/porsche.jpg" class="card-img-top" alt="porsche">
+                            <div class="card-body">
+                                <h3 class="card-title">PORSCHE 911</h3>
+                                    <p class="card-text">
+                                        <span>Année: 2016</span><br>
+                                        <span>Essence</span><br>
+                                        <span>51 500 km</span><br>
+                                        <hr>
+                                    </p>
+                                    <p class="price">116 990 €</p>
+                                    <a href="#" class="btn-car">Détails</a>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="card">  
+                        <div class="card-header">
+                             <img src="./assets/img/hyundai.png" class="card-img-top" alt="hyindai">
+                            <div class="card-body">
+                                <h3 class="card-title">HYUNDAI IONIQ</h3>
+                                    <p class="card-text">
+                                        <span>Année: 2019</span><br>
+                                        <span>Hybride essence électrique</span><br>
+                                        <span>31 189 km</span><br>
+                                        <hr>
+                                    </p>
+                                    <p class="price">21 990 €</p>
+                                    <a href="#" class="btn-car">Détails</a>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="card">  
+                        <div class="card-header">
+                             <img src="./assets/img/bmv_1800.jpg" class="card-img-top" alt="bmw">
+                            <div class="card-body">
+                                <h3 class="card-title">BMW 1800</h3>
+                                    <p class="card-text">
+                                        <span>Année: 1966</span><br>
+                                        <span>Essence</span><br>
+                                        <span>66 500 km</span><br>
+                                        <hr>
+                                    </p>
+                                    <p class="price">16 290 €</p>
+                                    <a href="#" class="btn-car">Détails</a>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="card">  
+                        <div class="card-header">
+                             <img src="./assets/img/bm.png" class="card-img-top" alt="bmw">
+                            <div class="card-body">
+                                <h3 class="card-title">BMW Mille Miglia</h3>
+                                    <p class="card-text">
+                                        <span>Année: 1940</span><br>
+                                        <span>Essence</span><br>
+                                        <span>150 230 km</span><br>
+                                        <hr>
+                                    </p>
+                                    <p class="price">21 267 990 €</p>
+                                    <a href="#" class="btn-car">Détails</a>
+                            </div>
+                        </div>
+                      </div> 
+                      <div class="card">
+                        <div class="card-header">
+                             <img src="./assets/img/bmw_700.jpg" class="card-img-top" alt="bmv">
+                            <div class="card-body">
+                                <h3 class="card-title">BMV 700</h3>
+                                    <p class="card-text">
+                                        <span>Année: 1964</span><br>
+                                        <span>Essence</span><br>
+                                        <span>73 500 km</span><br>
+                                        <hr>
+                                    </p>
+                                    <p class="price">43 990 €</p>
+                                    <a href="#" class="btn-car">Détails</a>
+                            </div>
+                        </div>
+                      </div>  
+                    </article>
+                </div>
+            </section>
+        
+    </main>
+
+      <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer_col">
+          <div class="footer-brand">
+            <a href="#" class="logo">
+              <img src="./assets/img/logo_parrot .png" alt="logo_parrot">
+            </a>
+          </div>  
+            <p class="description">
+              Garage V. Parrot, le meilleur solution pour votre voiture
+            </p>
+
+           <ul class="footer__socials">
+             <li>
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+             </li>
+             <li>
+              <a href="#"><i class="ri-google-fill"></i></a>
+             </li>
+             <li>
+              <a href="#"><i class="ri-instagram-line"></i></a>
+             </li>
+           </ul>
+          </div>
+          <div class="footer_col">
+            <h3>Horaires</h3>
+           <ul class="footer-list">
+              <li>
+                <p class="p">Lundi – Vendredi</p>
+                <span class="span">08.45 – 12.00</span><br>
+                <span class="span">14.00 – 18.00</span>
+              </li>
+
+              <li>
+                <p class="p">Samedi – <p>
+                <span class="span">08.45 – 12.00</span>
+              </li>
+
+              <li>
+                <p class="p">Dimanche – Fermé</p>
+              
+              </li>
+
+             </ul>
+          </div>
+          <div class="footer_col">
+            <h3>Contact Info</h3>
+          <ul class="footer-list">
+              <li>
+                <p>
+                  <span class="span">+33 5 55 77 75 55</span>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <span class="span">parrot@service.fr</span>
+                </p>
+              </li>
+
+               <li>
+                 <p>
+                  <span class="span">21 Rue Bayard</span>
+                 </p>
+                </li>
+                <li>
+                  <p>
+                    <span>31000, Toulouse</span>
+                  </p>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <p class="copyright">Copyright 2024, Tous droits réservés. Développé par Salza.u</p>
+        </div>
+      </div>
+    </footer>
+    <!--Js-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

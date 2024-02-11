@@ -259,7 +259,7 @@ nav {
 .item-card { position: relative; }
 
 .item-card .card-content {
-  background-color: var(--white);
+  background-color: var(--width);
   max-width: 90%;
   padding: 30px 20px;
   margin-block-start: -60px;
@@ -268,6 +268,7 @@ nav {
   text-align: center;
   box-shadow: var(--shadow);
 }
+
 .item-card .card-title { margin-block-end: 10px;
   text-transform: uppercase;
  }
@@ -426,7 +427,7 @@ nav {
 }
 
 .btn-v {
-   padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1.5rem;
   background-color: var(--primary-color);
   color: var(--white);
   max-width: max-content;
@@ -454,7 +455,7 @@ nav {
 .footer-top { background-color: var(--secondary-color); }
 
 .footer-bottom {
-  background-color: var(--oxford-blue-1);
+  background-color: var(--oxford-blue-2);
   padding-block: 20px;
 }
 
@@ -525,19 +526,132 @@ nav {
   transition: 0.3s;
 }
 
+/*-- Used cars page--*/
+
+.usedCars-filter {
+  width: 100%;
+  padding: 20px;
+  background-color: #d2D4DB;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default{
+  border: 2px solid var(--primary);
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+}
+
+.ui-slider-horizontal .ui-slider-handle{
+  top:-0.25rem;
+}
+
+.filter {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.filter-group {
+  margin:10px 0;
+  width: 100%;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-weight: 500;
+  font-family: "Poppins", sans serif;
+}
+#km_range,
+#year_range,
+#price_range{
+  width: 200px;
+}
+
+/* #loading {
+  background: url('../img') no-repeat center;
+  background-size: 100%;
+  height: 150px;
+  width: 150px;
+  font-size:1rem;
+  margin:40px auto;
+} */
+.filter-group p{
+  font-size: .9rem;
+  font-weight: 500;
+}
+.btn-filter {
+  display: inline-block;
+  width: 100px;
+  margin-top: 1rem;
+  font-size: 1rem;
+  margin: 10px 0;
+  padding: 3px 6px;
+  text-align: center;
+  border-radius: 0.5rem;
+  border: 2px solid var(--primary-color-dark);
+}
+
+.price {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.btn-car {
+  border: 2px solid var(--primary-color-dark);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.5rem; 
+  color: var(--secondary-color);
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  margin-bottom: 1rem;
+}
+.btn-car.large {
+  padding: 0.2rem 1rem;
+}
+
+.btn-car.small {
+  padding: 0.2rem 1rem;
+  
+}
+.card {
+  display: flex;
+  margin: 20px;
+}
+.data_cars {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 10px 20px 10px;
+  
+  justify-content: center;
+  transition: 0.5s ease;
+  transform: scale(1);
+}
+
+.card-header {
+  border-radius: 1rem;
+  background-color: var(--extra-light);
+  padding: 10px;
+}
+.card-body {
+  padding: 20px;
+
+}
+.card-body .btn-car {
+  align-items: center;
+}
+
+
 /*-- Responsive --*/
 
 @media (min-width: 575px) {
 
-   :root {
-
-    /*-- typography --*/
-
-    --fs-2: 4rem;
-    --fs-3: 2.8rem;
-    --fs-4: 2rem;
-
-  }
 
   /*--Services--*/
     .service .sections-title { margin-block-end: 30px;
@@ -576,16 +690,14 @@ nav {
   padding: 20px;
   font-size: 0.80rem;
 }
+ /*-- Used cars page --*/
+
+  
 
 }
+
 @media (min-width: 768px) {
 
-  root {
-    /*-- typo--*/
-    --fs-1: 4rem;
-    --fs-2: 5rem;
-    --fs-3: 3.4rem;
-  }
 
    .logo img {
     max-width: 100px;
@@ -678,14 +790,29 @@ nav {
   .copyright { --fs-6: 1.4rem; }
 }
 
-@media (min-width: 992px ){
-
-  root {
-    /*-- typo --*/
-    --fs-2: 4.4rem;
-    --fs-3: 3.8rem;
-    --fs-4: 2.2rem;
+/*-- Used cars ---*/
+  .filters{
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
   }
+
+  .filter-group{
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+    .filter-group p{
+    font-size: 1rem;
+    font-weight: 500;
+  }
+ 
+
+@media (min-width: 992px ){
 
   /*--Header--*/
 
@@ -798,6 +925,10 @@ nav {
     width: 48%;
   }
    
+  /*-- Used cars page --*/
+  .data_cars .card {
+    max-width: calc(33% - 1rem);
+  }
 
 }
 
@@ -805,13 +936,6 @@ nav {
 
 @media (min-width: 1200px) {
 
-    :root {
-
-    /*--typo --*/
-
-    --fs-2: 5rem;
-    --fs-3: 4.6rem;
-  }
 
   /*--Header--*/
    .logo img {
