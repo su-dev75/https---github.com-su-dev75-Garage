@@ -23,7 +23,7 @@ const scrollRevealOptions = {
   duration: 1000,
 };
 
-// header container
+// Header container
 ScrollReveal().reveal(".header__content h1", {
   ...scrollRevealOptions,
 });
@@ -33,10 +33,15 @@ ScrollReveal().reveal(".header__btn", {
   delay: 500,
 });
 
+// Pagination
 const swiper = new Swiper(".swiper", {
   loop: true,
   pagination: {
     el: ".swiper-pagination",
   },
 });
+
+// Filter cars
+
+
 

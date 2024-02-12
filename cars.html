@@ -9,6 +9,7 @@
 
     <!--Link css-->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./Js/jquery-ui.min.css">
 
     <!-- Links -->
         <link
@@ -19,7 +20,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
-    
+
 </head>
 <body>
     
@@ -35,11 +36,11 @@
           </div>
         </div>
         <ul class="nav__links" id="nav-links">
-          <li><a href="#accueil">Accueil</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#voitures">Voitures</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <button class="btn">Connexion Pro</button>
+          <li><a href="home.html">Accueil</a></li>
+          <li><a href="home.html#services">Services</a></li>
+          <li><a href="home.html#voitures">Voitures</a></li>
+          <li><a href="home.html#contact">Contact</a></li>
+          <li><a href="connection.html" class="btn">Connexion Pro</a></li>
         </ul>
       </nav>
     </div>
@@ -56,38 +57,39 @@
                             <input type="hidden" id="hidden-min-km" value="7000">
                             <input type="hidden" id="hidden-max-km" value="377000">
                             <p id="km_show" class="mb-2">7 000km - 377 000km</p>
-                            <div class="km_range" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+                            <div id="km_range" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
                                 <div class="ui-slider-range ui-corner-all ui-widget-header" style="width: 100%; left: 0%;">
                                 </div>
                                 <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span>
                                 <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span>
-
                             </div>
-                            <button type="button" id="reset-button-k" class="btn-filter">Réinitialiser</button>
+                            <button type="button" id="reset-button-k" class="btn-filter">Réinitialiser</button> 
                         </div>
                         <div class="filter-group">
                             <h2 class="filter-title">Prix</h2>
                             <input type="hidden" id="hidden-min-price" value="37 000€">
                             <input type="hidden" id="hidden-max-price" value="157 000€">
                             <p id="price_show" class="mb-2">37 000€ - 157 000€</p>
-                            <div class="price_range" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+                            <div id="price_range" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
                                 <div class="ui-slider-range ui-corner-all ui-widget-header" style="width: 100%; left: 0%;">
                                 </div>
                                 <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span>
                                 <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span>
-                                <button type="button" id="reset-button-k" class="btn-filter">Réinitialiser</button>
+                            </div>  
+                             <button type="button" id="reset-button-k" class="btn-filter">Réinitialiser</button>  
                         </div>
                         <div class="filter-group">
                             <h2 class="filter-title">Années</h2>
                             <input type="hidden" id="hidden-min-year" value="1960">
                             <input type="hidden" id="hidden-max-year" value="2022">
                             <p id="year_show" class="mb-2">1950 - 2022</p>
-                            <div class="year_range" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+                            <div id="year_range" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
                                 <div class="ui-slider-range ui-corner-all ui-widget-header" style="width: 100%; left: 0%;">
                                 </div>
                                 <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span>
                                 <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span>
-                                <button type="button" id="reset-button-k" class="btn-filter">Réinitialiser</button>
+                            </div> 
+                              <button type="button" id="reset-button-k" class="btn-filter">Réinitialiser</button>   
                         </div>
                     </article>
                     <!-- Section cars-->
@@ -324,9 +326,10 @@
       </div>
     </footer>
     <!--Js-->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="./Js/script.js"></script>
+    <script src="./Js/jquery-3.7.1.min.js"></script>
+    <script src="./Js/jquery-ui.min.js"></script>
 </body>
 </html>
