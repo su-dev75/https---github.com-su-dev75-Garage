@@ -41,7 +41,5 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-// Filter cars
-
 
 

@@ -1,18 +1,15 @@
 /*--Google Fonts--*/
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
-/*-- Variables--*/
+
   
 :root {
 
   /*-- Colors --*/
 
   --primary-color: #da042a;
-  --primary-color-dark: #c00427;
   --secondary-color: hsl(222, 44%, 18%);
-  --oxford-blue-1: hsl(222, 47%, 15%);
   --oxford-blue-2: hsl(222, 44%, 14%);
-  --oxford-blue-3: hsl(222, 50%, 11%);
   --cadet-blue-creyola: hsl(222, 14%, 69%);
   --text-light: #6b7280;
   --light-gray: hsl(0, 0%, 80%);
@@ -49,10 +46,6 @@
   border-radius: 5px;
   transition: 0.3s;
   cursor: pointer;
-}
-
-.btn:hover {
-  background-color: var(--primary-color-dark);
 }
 
 img {
@@ -282,7 +275,7 @@ nav {
 }
 
 /*-- Testimonial --*/
-.testimonial{
+.reviews{
   width: 80%;
   margin: 0 auto;
   padding: 20px 20px 40px;
@@ -302,41 +295,34 @@ nav {
   padding: 20px;
   
 }
-.swiper {
-  width: 100%;
-  margin-top: 4rem;
-  padding-bottom: 4rem;
-  border: 3px solid #6b7280;
-}
-.testimonial__card i {
-  color: #da042a;
-  
-}
-.testimonial__card {
-  max-width: 600px;
-  margin: auto;
-  
-}
 
-.testimonial__card img {
-  max-width: 100px;
-  margin: auto;
-  margin-bottom: 1rem;
-  border-radius: 100%;
+
+.reviews .reviews-slider .box  {
+  width: 100%;
+  margin: 1rem;
+  padding: 15px;
+ box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+} 
+.reviews .reviews-slider .swiper-slide-active {
+  opacity: 1;
+  transform: scale(1);
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
 }
-
-.testimonial__card p {
+.reviews .reviews-slider .box .reviews-content p {
   margin-bottom: 1rem;
   color: var(--oxford-blue-2);
 }
 
-.testimonial__card h4 {
+.reviews .reviews-slider .box .reviews-content h4 {
   font-size: 1.2rem;
   font-weight: 500;
-  color: var(--primary-color);
+  color: var(--oxford-blue-2);
 }
-
+.reviews-slider .box .reviews-content .stars i {
+  color: var(--primary-color);
+  justify-content: center;
+  margin-bottom: 2rem;
+}
 /*--Contact--*/
 
 
@@ -554,7 +540,7 @@ nav {
   flex-direction: column;
   font-weight: 300;
   font-size: 0.7rem;
-  font-family: "Poppins", sans serif;
+  font-family: "Poppins", sans-serif;
 }
 .mb-2 .my-2 {
   margin-bottom: 0.5rem!important;
@@ -589,7 +575,8 @@ nav {
   padding: 3px 6px;
   text-align: center;
   border-radius: 0.5rem;
-  border: 2px solid var(--primary-color-dark);
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
 }
 
 .price {
@@ -598,7 +585,7 @@ nav {
 }
 
 .btn-car {
-  border: 2px solid var(--primary-color-dark);
+  border: 2px solid var(--primary-color);
   padding: 0.2rem 0.4rem;
   border-radius: 0.5rem; 
   color: var(--secondary-color);
@@ -643,9 +630,7 @@ nav {
 }
 
 /*-- Connection page --*/
-/* .main {
-  display: block;
-}*/
+
 
 .form-connect {
   margin-top: 1rem !important;
@@ -672,7 +657,7 @@ nav {
 .connectionForm label {
     font-size: 0.9rem;
     font-weight: 600;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     display: block;
@@ -690,7 +675,7 @@ nav {
     line-height: inherit;
 }
 span.error {
-  color: red;
+  color: var(--primary-color);
 }
 .input-group {
     position: relative;
@@ -715,7 +700,9 @@ span.error {
   margin-left: 20px;
   margin-bottom: 10px;
 }
-/*-- RESPONSIVE --*/
+
+
+/*------- RESPONSIVE --------*/
 
 @media (min-width: 575px) {
 
@@ -969,10 +956,15 @@ span.error {
   .group-item { min-width: calc(33.33% - 20px); }
 
   /*-- Testimonial --*/
-  .swiper {
-    width: 80%;;
+  .swiper .reviews-slider {
+    width: 80%;
   }
 
+  .swiper-wrapper {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
   /*--Contact--*/
 
    .contact-sections {
@@ -1116,10 +1108,16 @@ span.error {
   }
 
   /*-- Testimonial --*/
-   .swiper {
-    width: 70%;;
+   .swiper .reviews-slider {
+    width: 80%;
+   
   }
 
+  .swiper-wrapper {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
   /*-- Contact --*/
 
   .contact-sections {
@@ -1134,6 +1132,17 @@ span.error {
     z-index: 1;
   }
 
+    /*---Used cars page --*/
+  .data_cars {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+  .data_cars .card {
+    flex: 1 1 18rem;
+    position: relative; 
+  }
 }
 
 @media (min-width: 1400px) {
@@ -1186,8 +1195,8 @@ span.error {
   }
 
   /*-- Testimonial --*/
-   .swiper {
-    width: 50%;;
+   .swiper .reviews-slider {
+    width: 50%;
   }
   /*-- Contact --*/
 
@@ -1228,5 +1237,11 @@ span.error {
 
 .filter-group {
   font-size: 1rem;
+}
+
+.swiper-wrapper {
+    padding: 20px;
+    display: flex;
+    align-items: center;
 }
 }
