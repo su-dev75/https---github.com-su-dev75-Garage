@@ -46,7 +46,7 @@
         <div class="header__content">
           <h1>Réparation, entretien & vente des véhicules d'occasion</h1>
           <div class="header__btn">
-            <button class="btn">Contactez nous</button>
+            <a href="#contact" class="btn">Contactez nous</a>
           </div>
         </div>
       </div>
@@ -210,6 +210,7 @@
       <h3 class="sections-soubtitle">Parce que votre avis compte pour nous</h3>
 
       <div class="swiper reviews-slider">
+
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides -->
@@ -219,7 +220,7 @@
                 J'amène ma voiture ici depuis des années et ils ne me déçoivent jamais. Leur préoccupation pour les détails et leurs engagements en faveur d'un service de qualité sont uniques. Ma voiture semble toujours neuve après 
                 la visite
               </p>
-              <h4>- John T.</h4>
+              <h4>- Jean T.</h4>
               <div class="stars">
                 <i class="ri-star-fill"></i>
                 <i class="ri-star-fill"></i>
@@ -261,11 +262,22 @@
             </div>
           </div>
         </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
+
+         <!-- Navigation buttons -->
+         <div class="swiper-button-prev" style="color:var(--text-light)"></div>
+         <div class="swiper-button-next" style="color: var(--text-light)"></div>
+        <!-- Pagination -->
+         <div class="swiper-pagination"></div>
       </div>
+      <div class="add-review">
+          <a href="post_review.html" class="btn">Donnez votre avis</a>
+        </div>
     </section>
 
+    <!-- Back to top button-->
+    <a href="#" id="button" class="back_to_top"> 
+      <i class="ri-arrow-up-double-line"></i>
+    </a>
     <!-- Contact -->
 
     <section class="contact-sections" id="contact">

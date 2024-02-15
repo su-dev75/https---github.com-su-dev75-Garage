@@ -289,14 +289,9 @@ nav {
   font-size: 1.2rem;
   position:relative; 
 }
-
-
 .swiper-wrapper {
-  padding: 20px;
-  
+  padding: 10px;
 }
-
-
 .reviews .reviews-slider .box  {
   width: 100%;
   margin: 1rem;
@@ -323,6 +318,13 @@ nav {
   justify-content: center;
   margin-bottom: 2rem;
 }
+
+.add-review {
+  width: 100%;
+  text-align: center;
+  margin: 40px 0 0;
+}
+
 /*--Contact--*/
 
 
@@ -549,22 +551,16 @@ nav {
   width: 200px;
 }
 
-.ui-state-default .ui-widget-content .ui-state-default{
-  border: 2px solid var(--secondary-color);
-  width: 1.2rem;
-  height: 1.2rem;
-  border-radius: 50%;
-  
+.ui-state-default, .ui-widget-content .ui-state-default {
+    border: 2px solid var(--secondary-color);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
 }
-
-.ui-slider-horizontal .ui-slider-handle{
-  top:-0.25rem;
-}
-
-
 .filter-group p{
   font-size: 0.9rem;
   font-weight: 400;
+  margin-top: 10px;
 }
 .btn-filter {
   display: inline-block;
@@ -668,12 +664,7 @@ nav {
   width: 100%;
   display: inline-block;
 }
-.button input  optgroup  select textarea {
-    margin: 0;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-}
+
 span.error {
   color: var(--primary-color);
 }
@@ -701,7 +692,43 @@ span.error {
   margin-bottom: 10px;
 }
 
+.connectionForm .form-group input {
+  width: 100%;
+  height: 3rem;
+}
+.form-group textarea  {
+  width: 100%;
+  min-height: 200px;
+  resize: none;
+}
 
+.note {
+  width: 180px;
+  height: 2rem;
+}
+ /*-- Back to top --*/
+
+ .back_to_top {
+  color: var(--primary-color);
+  font-size: 3rem;
+  display: inline-block;  
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+ }
+
+ .back_to_top ::after {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: var(--primary-color);
+ }
 /*------- RESPONSIVE --------*/
 
 @media (min-width: 575px) {
@@ -1027,6 +1054,7 @@ span.error {
     width: 48%;
   }
    
+  
   /*---Used cars page --*/
   .data_cars {
     display: flex;
@@ -1045,6 +1073,7 @@ span.error {
   max-width: 700px;
   padding: 20px;
 }
+
 }
 
 

@@ -29,7 +29,7 @@
         <nav style="background-color: var(--oxford-blue-2);">
         <div class="nav__bar">
           <div class="logo nav__logo">
-            <a href="#"><img src="assets/img/logo_parrot .png" alt="logo" /></a>
+            <a href="home.html"><img src="assets/img/logo_parrot .png" alt="logo" /></a>
           </div>
           <div class="nav__menu__btn" id="menu-btn">
             <i class="ri-menu-line"></i>
@@ -55,40 +55,40 @@
                         <div class="filter-group">
                             <h2 class="filter-title">Kilométrage</h2>
                             <input type="hidden" id="hidden-min-km" value="7000">
-                            <input type="hidden" id="hidden-max-km" value="377000">
-                            <p id="km_show" class="mb-2">7 000km - 377 000km</p>
+                            <input type="hidden" id="hidden-max-km" value="377000">  
                             <div id="km_range" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
                                 <div class="ui-slider-range ui-corner-all ui-widget-header" style="width: 100%; left: 0%;">
                                 </div>
                                 <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span>
                                 <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span>
                             </div>
+                            <p id="km_show" class="mb-2">7 000km - 377 000km</p>
                             <button type="button" id="reset-button-k" class="btn-filter">Réinitialiser</button> 
                         </div>
                         <div class="filter-group">
                             <h2 class="filter-title">Prix</h2>
                             <input type="hidden" id="hidden-min-price" value="37 000€">
                             <input type="hidden" id="hidden-max-price" value="157 000€">
-                            <p id="price_show" class="mb-2">37 000€ - 157 000€</p>
                             <div id="price_range" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
                                 <div class="ui-slider-range ui-corner-all ui-widget-header" style="width: 100%; left: 0%;">
                                 </div>
                                 <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span>
                                 <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span>
                             </div>  
+                            <p id="price_show" class="mb-2">37 000€ - 157 000€</p>
                              <button type="button" id="reset-button-p" class="btn-filter">Réinitialiser</button>  
                         </div>
                         <div class="filter-group">
                             <h2 class="filter-title">Années</h2>
                             <input type="hidden" id="hidden-min-year" value="1960">
                             <input type="hidden" id="hidden-max-year" value="2022">
-                            <p id="year_show" class="mb-2">1950 - 2022</p>
                             <div id="year_range" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
                                 <div class="ui-slider-range ui-corner-all ui-widget-header" style="width: 100%; left: 0%;">
                                 </div>
                                 <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span>
                                 <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span>
                             </div> 
+                            <p id="year_show" class="mb-2">1950 - 2022</p>
                               <button type="button" id="reset-button-y" class="btn-filter">Réinitialiser</button>   
                         </div>
                     </article>
@@ -212,7 +212,7 @@
                             <div class="card-body">
                                 <h3 class="card-title">BMW Mille Miglia</h3>
                                     <p class="card-text">
-                                        <span>Année: 1940</span><br>
+                                        <span>Année: 1950</span><br>
                                         <span>Essence</span><br>
                                         <span>150 230 km</span><br>
                                         <hr>
@@ -240,8 +240,11 @@
                       </div>  
                     </article>
                 </div>
-            </section>
-        
+                    <!-- Back to top button-->
+                     <a href="#" id="button" class="back_to_top"> 
+                         <i class="ri-arrow-up-double-line"></i>
+                     </a>
+            </section>    
     </main>
 
       <!-- Footer -->
