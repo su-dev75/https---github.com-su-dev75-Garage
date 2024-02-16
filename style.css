@@ -1267,7 +1267,20 @@ span.error {
 .filter-group {
   font-size: 1rem;
 }
+  .data_cars {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+  .data_cars .card {
+    flex: 1 1 20rem;
+    position: relative; 
+}
 
+  .card{
+      max-width: calc(33% - 1em);
+}
 .swiper-wrapper {
     padding: 20px;
     display: flex;
