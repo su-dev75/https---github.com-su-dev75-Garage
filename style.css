@@ -7,10 +7,11 @@
 
   /*-- Colors --*/
 
-  --primary-color: #da042a;
-  --secondary-color: hsl(222, 44%, 18%);
+  --red: #da042a;
+  --oxford-blue-1: hsl(222, 44%, 18%);
   --oxford-blue-2: hsl(222, 44%, 14%);
   --cadet-blue-creyola: hsl(222, 14%, 69%);
+  --gray: #D2D4DB;
   --text-light: #6b7280;
   --light-gray: hsl(0, 0%, 80%);
   --extra-light: #f8f7fd;
@@ -40,7 +41,7 @@
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   color: var(--white);
-  background-color: var(--primary-color);
+  background-color: var(--red);
   outline: none;
   border: none;
   border-radius: 5px;
@@ -160,10 +161,10 @@ nav {
   margin: 100px 0 50px;
   font-weight: 600;
   text-transform: uppercase;
-  color: var(--secondary-color);
+  color: var(--oxford-blue-1);
   font-size: 1.4rem;
   position:relative;
-  text-decoration: underline 3px solid var(--primary-color);
+  text-decoration: underline 3px solid var(--red);
 }
 .sections-description {
   max-width: var(--max-width);
@@ -201,7 +202,7 @@ nav {
 }
 .service-card h3 {
   text-align: center;
-  color: var(--secondary-color);
+  color: var(--oxford-blue-1);
 }
 /*-- Cars --*/
 
@@ -241,7 +242,7 @@ nav {
 .item-card { position: relative; }
 
 .item-card .card-content {
-  background-color: var(--secondary-color);
+  background-color: var(--oxford-blue-1);
   max-width: 90%;
   padding: 30px 20px;
   margin-block-start: -60px;
@@ -258,7 +259,7 @@ nav {
 
 .voitures_group .btn-v {
   padding: 0.75rem 1.5rem;
-  background-color: var(--primary-color);
+  background-color: var(--red);
   color: var(--white);
   max-width: max-content;
   font-size: 1rem;
@@ -314,7 +315,7 @@ nav {
   color: var(--oxford-blue-2);
 }
 .reviews-slider .box .reviews-content .stars i {
-  color: var(--primary-color);
+  color: var(--red);
   justify-content: center;
   margin-bottom: 2rem;
 }
@@ -406,7 +407,7 @@ nav {
 
 .btn-v {
   padding: 0.75rem 1.5rem;
-  background-color: var(--primary-color);
+  background-color: var(--red);
   color: var(--white);
   max-width: max-content;
   font-size: 1rem;
@@ -430,7 +431,7 @@ nav {
 
 .footer { color: var(--cadet-blue-creyola); }
 
-.footer-top { background-color: var(--secondary-color); }
+.footer-top { background-color: var(--oxford-blue-1); }
 
 .footer-bottom {
   background-color: var(--oxford-blue-2);
@@ -476,7 +477,7 @@ nav {
 }
 
 .footer__socials a:hover {
-  color: var(--primary-color);
+  color: var(--red);
   background-color: var(--white);
 }
 
@@ -487,7 +488,7 @@ nav {
   color: var(--white);
   text-transform: uppercase;
   padding-left: 20px;
-  text-decoration: underline 3px solid var(--primary-color);
+  text-decoration: underline 3px solid var(--red);
 }
 
 .footer-list li {
@@ -552,7 +553,7 @@ nav {
 }
 
 .ui-state-default, .ui-widget-content .ui-state-default {
-    border: 2px solid var(--secondary-color);
+    border: 2px solid var(--oxford-blue-1);
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
@@ -571,7 +572,7 @@ nav {
   padding: 3px 6px;
   text-align: center;
   border-radius: 0.5rem;
-  border: 2px solid var(--primary-color);
+  border: 2px solid var(--red);
   cursor: pointer;
 }
 
@@ -581,10 +582,10 @@ nav {
 }
 
 .btn-car {
-  border: 2px solid var(--primary-color);
+  border: 2px solid var(--red);
   padding: 0.2rem 0.4rem;
   border-radius: 0.5rem; 
-  color: var(--secondary-color);
+  color: var(--oxford-blue-1);
   cursor: pointer;
   font-family: 'Poppins', sans-serif;
   -webkit-transition: all 0.2s ease;
@@ -639,7 +640,7 @@ nav {
   padding: 20px;
 }
 .connect .connect-wrapper{
-  background-color: var(--text-light);
+  background-color: var(--gray);
   width: 100%;
   margin: 20px auto 40px;
   border-radius: 5px;
@@ -666,7 +667,7 @@ nav {
 }
 
 span.error {
-  color: var(--primary-color);
+  color: var(--red);
 }
 .input-group {
     position: relative;
@@ -709,7 +710,7 @@ span.error {
  /*-- Back to top --*/
 
  .back_to_top {
-  color: var(--primary-color);
+  color: var(--red);
   font-size: 3rem;
   display: inline-block;  
   width: 50px;
@@ -727,7 +728,7 @@ span.error {
     font-style: normal;
     font-size: 2em;
     line-height: 50px;
-    color: var(--primary-color);
+    color: var(--red);
  }
 /*------- RESPONSIVE --------*/
 
@@ -1243,7 +1244,7 @@ span.error {
   color: var(--white);
   text-transform: uppercase;
   padding-left: 20px;
-  text-decoration: underline 3px solid var(--primary-color);
+  text-decoration: underline 3px solid var(--red);
   
 }
   .footer-top .description {
