@@ -177,7 +177,7 @@ nav {
 .service-banner {
   display: none;
 }
- .move-anim { animation: moving 10s ease-in-out; }
+ .move-anim { animation: moving 5s ease-in-out; }
 
 @keyframes moving {
   /*
