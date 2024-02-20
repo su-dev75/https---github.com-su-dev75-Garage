@@ -47,40 +47,39 @@
 
     <main>
         <!-- Section filter-->
-        
             <section id="cars" class="usedCars-filter">
                 <h1 class="sections-title">Nos voitures d'occasions</h1>
                 <div class="filter-cars">
                     <article class="filter">
                         <div class="filter-group">
-                            <h2 class="filter-title">Kilométrage</h2>
-                            <input type="hidden" id="hidden-min-km" value="17000">
-                            <input type="hidden" id="hidden-max-km" value="66500">  
+                           <h2 class="filter-title">Kilométrage</h2>
+                            <input type="hidden" id="hidden-min-km" value="16500">
+                            <input type="hidden" id="hidden-max-km" value="51500">  
                             <div id="km_range" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
-                                <div class="ui-slider-range ui-corner-all ui-widget-header" style="width: 100%; left: 0%;">
-                                </div>
+                            <div class="ui-slider-range ui-corner-all ui-widget-header"   style="width: 100%; left: 0%;">
+                            </div>
                                 <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span>
                                 <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span>
                             </div>
-                            <p id="km_show" class="mb-2">17000km - 66500km</p>
+                            <p id="km_show" class="mb-2">16500km - 51500km</p>
                             <button type="button" id="reset-button-k" class="btn-filter">Réinitialiser</button> 
                         </div>
-                        <div class="filter-group">
+                        <div class="filter-group">  
                             <h2 class="filter-title">Prix</h2>
-                            <input type="hidden" id="hidden-min-price" value="21990€">
-                            <input type="hidden" id="hidden-max-price" value="212990€">
+                            <input type="hidden" id="hidden-min-price" value="21900€">
+                            <input type="hidden" id="hidden-max-price" value="80900€">
                             <div id="price_range" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
-                                <div class="ui-slider-range ui-corner-all ui-widget-header" style="width: 100%; left: 0%;">
-                                </div>
+                             <div class="ui-slider-range ui-corner-all ui-widget-header" style="width: 100%; left: 0%;">
+                             </div>
                                 <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span>
                                 <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span>
                             </div>  
-                            <p id="price_show" class="mb-2">21990€ - 212990€</p>
-                             <button type="button" id="reset-button-p" class="btn-filter">Réinitialiser</button>  
-                        </div>
+                            <p id="price_show" class="mb-2">21900€ - 80900€</p>
+                             <button type="button" id="reset-button-p" class="btn-filter">Réinitialiser</button> 
+                        </div> 
                         <div class="filter-group">
                             <h2 class="filter-title">Années</h2>
-                            <input type="hidden" id="hidden-min-year" value="2015">
+                           <input type="hidden" id="hidden-min-year" value="2015">
                             <input type="hidden" id="hidden-max-year" value="2020">
                             <div id="year_range" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
                                 <div class="ui-slider-range ui-corner-all ui-widget-header" style="width: 100%; left: 0%;">
@@ -89,11 +88,11 @@
                                 <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span>
                             </div> 
                             <p id="year_show" class="mb-2">2015 - 2020</p>
-                              <button type="button" id="reset-button-y" class="btn-filter">Réinitialiser</button>   
+                              <button type="button" id="reset-button-y" class="btn-filter">Réinitialiser</button>  
                         </div>
                     </article>
                     <!-- Section cars-->
-                    <article class="data_cars">
+                    <article class="data_cars" id="car-container">
                       <div class="card">
                         <div class="card-header">
                              <img src="./assets/img/bmv.png" class="card-img-top" alt="bmv">
@@ -102,7 +101,7 @@
                                     <p class="card-text">
                                         <span>Année: 2016</span><br>
                                         <span>Diesel</span><br>
-                                        <span>66 500 km</span><br>
+                                        <span>16.500 km</span><br>
                                         <hr>
                                     </p>
                                     <p class="price">26.500 €</p>
@@ -118,10 +117,10 @@
                                     <p class="card-text">
                                         <span>Année: 202O</span><br>
                                         <span>Essence</span><br>
-                                        <span>17000 km</span><br>
+                                        <span>17.000 km</span><br>
                                         <hr>
                                     </p>
-                                    <p class="price">63.590 €</p>
+                                    <p class="price">25.500 €</p>
                                     <a href="#" class="btn-car">Détails</a>
                             </div>
                         </div>
@@ -134,10 +133,10 @@
                                     <p class="card-text">
                                         <span>Année: 2015</span><br>
                                         <span>Disel</span><br>
-                                        <span>53 500 km</span><br>
+                                        <span>20.500 km</span><br>
                                         <hr>
                                     </p>
-                                    <p class="price">23.990 €</p>
+                                    <p class="price">23.900 €</p>
                                     <a href="#" class="btn-car">Détails</a>
                             </div>
                         </div>
@@ -150,10 +149,10 @@
                                     <p class="card-text">
                                         <span>Année: 2017</span><br>
                                         <span>Essence</span><br>
-                                        <span>33 500 km</span><br>
+                                        <span>30.500 km</span><br>
                                         <hr>
                                     </p>
-                                    <p class="price">212.990 €</p>
+                                    <p class="price">80.900 €</p>
                                     <a href="#" class="btn-car">Détails</a>
                             </div>
                         </div>
@@ -166,10 +165,10 @@
                                     <p class="card-text">
                                         <span>Année: 2016</span><br>
                                         <span>Essence</span><br>
-                                        <span>51 500 km</span><br>
+                                        <span>51.500 km</span><br>
                                         <hr>
                                     </p>
-                                    <p class="price">116.990 €</p>
+                                    <p class="price">50.000 €</p>
                                     <a href="#" class="btn-car">Détails</a>
                             </div>
                         </div>
@@ -182,10 +181,10 @@
                                     <p class="card-text">
                                         <span>Année: 2019</span><br>
                                         <span>Hybride essence électrique</span><br>
-                                        <span>31 189 km</span><br>
+                                        <span>35.500 km</span><br>
                                         <hr>
                                     </p>
-                                    <p class="price">21.990 €</p>
+                                    <p class="price">21.900 €</p>
                                     <a href="#" class="btn-car">Détails</a>
                             </div>
                         </div>
@@ -283,6 +282,7 @@
     <!--Js-->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="./Js/script.js"></script>
     <script src="./Js/jquery-3.7.1.min.js"></script>
     <script src="./Js/jquery-ui.min.js"></script>
