@@ -285,20 +285,20 @@
       <div class="contact">
         <h3 class="sections-soubtitle">Vous avez une question ? Contactez-nous !</h3>
 
-        <form method="POST" id="addContact">
+        <form method="post" id="addContact">
           <div class="contact-form">
             <div class="form-left">
               <div class="col ">
-                 <input type="text"  minlength="3" maxlength="25" placeholder="Nom" autocomplete= "off" aria-label="First name">
+                 <input type="text"  minlength="3" maxlength="25" placeholder="Nom" autocomplete= "off" aria-label="First name" required>
               </div>
               <div class="col">
-                 <input type="text"  minlength="3" maxlength="25" placeholder="Prénom" autocomplete="off" aria-label="Last name">
+                 <input type="text"  minlength="3" maxlength="25" placeholder="Prénom" autocomplete="off" aria-label="Last name" required>
               </div>
               <div class="col">
                  <input type="text"  minlength="9" maxlength="15" placeholder="Téléphone" autocomplete="off" aria-label="phone">
               </div>
                 <div class="col">
-                 <input type="text" minlength="20" maxlength="40" placeholder="E-mail" autocomplete="off" aria-label="email">
+                 <input type="text" minlength="20" maxlength="40" placeholder="E-mail" autocomplete="off" aria-label="email" required>
               </div>
             </div>
             <div class="form-right">
@@ -310,8 +310,7 @@
             </div>
             </div>
           </div>
-          <a href="#" class="btn-v">
-            <span class="span">Envoyer</span>
+          <button type="btn" id="submit" class="btn-v">Envoyer</button>
           </a>
         </form>
       </div>
@@ -400,6 +399,14 @@
     </footer>
 
     <!--Js-->
+    <script>
+      var myButton = document.querySelector("#submit");
+
+          myButton.onclick = function () {
+         alert("Votre message a été envoyé ! Je vous remercie !");
+      };
+
+    </script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="./Js/script.js"></script>

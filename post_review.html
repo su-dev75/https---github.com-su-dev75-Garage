@@ -48,11 +48,11 @@
                 <h1 class="sections-title">Donner votre avis</h1>
                 <div class="form-connect"></div>
                 <div class="connect-wrapper">
-                    <form action="login.php" metod="post" id="addReview">
+                    <form  metod="post" id="addReview">
                         <div class="connectionForm">
                             <div class="form-group">
                                 <label for="client">Votre nom</label>
-                                <input type="text" name="client" id="client" minlength="13" maxlength="35" autocomplete="off" placeholder="Michel Dubois">
+                                <input type="text" name="client" id="client" minlength="13" maxlength="35" autocomplete="off" placeholder="Michel Dubois" required>
                                 <span id="client_error" class="error"></span>
                             </div>
                             <div class="form-group">
@@ -64,7 +64,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="note">Votre note</label>
-                                <select name="note" id="note" class="forme-control note">
+                                <select name="note" id="note" class="forme-control note" required>
                                     <option value>Choisissez une étoile</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -169,6 +169,15 @@
       </div>
     </footer>
     <!--Js-->
+
+        <script>
+      var myButton = document.querySelector("#submit");
+
+          myButton.onclick = function () {
+         alert("Votre message a été envoyé ! Je vous remercie !");
+      };
+
+    </script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="./Js/script.js"></script>
