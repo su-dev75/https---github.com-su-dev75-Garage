@@ -177,12 +177,10 @@ nav {
 .service-banner {
   display: none;
 }
- .move-anim { animation: moving 5s ease-in-out; }
+ .move-anim { animation: moving 7s ease-in-out; }
 
 @keyframes moving {
-  /*
-  0% { transform: translateY(0); }
-  100% { transform: translateY(10px); } */
+  
       0%{
         transform: translate(180px, -300px) scale(0);
         opacity: 0;

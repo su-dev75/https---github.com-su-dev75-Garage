@@ -48,7 +48,7 @@
                 <h1 class="sections-title">Connexion</h1>
                 <div class="form-connect"></div>
                 <div class="connect-wrapper">
-                    <form action="login.php" method="post" class="login-form" id="loginForm">
+                    <form  method="post" class="login-form" id="loginForm">
                         <div class="connectionForm">
                             <div class="form-group">
                                 <label for="email">Adresse e-mail</label>
@@ -65,7 +65,7 @@
                         </div>
                         <input type="hidden" name="token" value="">
                         <div class="btn-form">
-                            <button type="submit" id="btn" class="btn">Connecter</button>
+                            <button type="btn" id="submit" class="btn">Connecter</button>
                         </div>
                     </form>
                 </div>
@@ -157,6 +157,15 @@
       </div>
     </footer>
     <!--Js-->
+
+     <script>
+      var myButton = document.querySelector("#submit");
+
+          myButton.onclick = function () {
+         alert("Page en construction !");
+      };
+
+    </script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="./Js/login.js"></script>
