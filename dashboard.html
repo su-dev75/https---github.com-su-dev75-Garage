@@ -1,0 +1,219 @@
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-----------Link Css------->
+    <link rel="stylesheet" href="style_dashboard.css" />
+
+    <!-----------Link Icons------>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <title>Dashboard</title>
+  </head>
+
+  <body>
+    <!------Sidebar Start-->
+    <div class="sidebar close">
+      <a href="#" class="logo">
+        <img src="./assets/img/favicon_parrot .png" alt="" />
+      </a>
+      <ul class="side-menu">
+        <li class="active">
+          <a href="#"><i class="bx bxs-dashboard"></i>Admin Panel</a>
+        </li>
+        <li>
+          <a href="#"><i class="bx bx-wrench"></i>Services</a>
+        </li>
+        <li>
+          <a href="#"><i class="bx bx-car"></i>Voitures</a>
+        </li>
+        <li>
+          <a href="#"><i class="bx bxs-calendar"></i>Horaires</a>
+        </li>
+        <li>
+          <a href="#"><i class="bx bx-group"></i>Employés</a>
+        </li>
+        <li>
+          <a href="#"><i class="bx bx-cog"></i>Paramètres</a>
+        </li>
+      </ul>
+
+      <div class="side-menu">
+        <ul>
+          <li>
+            <a href="connection.html" class="logout">
+              <i class="bx bx-log-out-circle"></i>Se déconnecter</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-----------Sidebar End------------->
+    <!-----------Content Start------------->
+    <div class="content">
+      <nav>
+        <i class="bx bx-menu"></i>
+
+        <form action="#">
+          <div class="form-input">
+            <input type="search" placeholder="Recherche..................." />
+            <button type="submit"><i class="bx bx-search"></i></button>
+          </div>
+        </form>
+        <a href="#" class="notification">
+          <i class="bx bx-bell"></i>
+          <span>12</span>
+        </a>
+        <a href="#" class="profile">
+          <img src="./assets/img/favicon_parrot .png" alt="" />
+        </a>
+      </nav>
+
+      <!-----------Content End------------->
+      <!-----------Main Start ------------->
+      <main>
+        <div class="header">
+          <h1>Tableau de board de Garage V. Parrot</h1>
+          <ul class="breadcrumb">
+            <li><a href="#">Analytique</a></li>
+            /
+            <li><a href="#">Contenu</a></li>
+          </ul>
+        </div>
+
+        <!--------------Card Start ---------->
+        <ul class="cards">
+          <li>
+            <i class="bx bx-wrench"></i>
+            <span class="info">
+              <h3>Gérer les services</h3>
+            </span>
+          </li>
+          <li>
+            <i class="bx bx-car"></i>
+            <span class="info">
+              <h3>Gérer les voitures</h3>
+            </span>
+          </li>
+          <li>
+            <i class="bx bx-calendar"></i>
+            <span class="info">
+              <h3>Gérer les horaires</h3>
+            </span>
+          </li>
+          <li>
+            <i class="bx bx-group"></i>
+            <span class="info">
+              <h3>Gérer les Employés</h3>
+            </span>
+          </li>
+        </ul>
+        <!-------bottom data start-->
+        <div class="bottom_data">
+          <div class="orders">
+            <div class="header">
+              <h3>Clients</h3>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Nom</th>
+                  <th>Email</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1010</td>
+                  <td class="img_content">
+                    <img src="./assets/img/face-1.png" alt="" />
+                    <p>John Doe</p>
+                  </td>
+                  <td>john.doe@example.com</td>
+                  <td>20 Sep 2023</td>
+                  <td><span class="status completed">Terminé</span></td>
+                </tr>
+                <tr>
+                  <td>1011</td>
+                  <td class="img_content">
+                    <img src="./assets/img/face-2.png" alt="" />
+                    <p>Jullee Smith</p>
+                  </td>
+                  <td>jullee.smith@example.com</td>
+                  <td>25 Mars 2024</td>
+                  <td><span class="status pending">En Attente</span></td>
+                </tr>
+                <tr>
+                  <td>1012</td>
+                  <td class="img_content">
+                    <img src="./assets/img/face-3.png" alt="" />
+                    <p>Cris Ria</p>
+                  </td>
+                  <td>cris.ria@example.com</td>
+                  <td>14 Fev 2024</td>
+                  <td><span class="status processing">En Cours</span></td>
+                </tr>
+                <tr>
+                  <td>1010</td>
+                  <td class="img_content">
+                    <img src="./assets/img/face-1.png" alt="" />
+                    <p>John Doe</p>
+                  </td>
+                  <td>john.doe@example.com</td>
+                  <td>20 Sep 2023</td>
+                  <td><span class="status completed">Terminé</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!--------------Reminder Start-------------->
+          <div class="reminders">
+            <div class="header">
+              <h3>Rapppels</h3>
+            </div>
+            <ul class="task_list">
+              <li class="completed">
+                <div class="task_title">
+                  <i class="bx bx-check-circle"></i>
+                  <p>Vérifier le stock des véhicules !</p>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </li>
+              <li class="completed">
+                <div class="task_title">
+                  <i class="bx bx-check-circle"></i>
+                  <p>Gérer les services sur le site !</p>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </li>
+              <li class="uncompleted">
+                <div class="task_title">
+                  <i class="bx bx-x-circle"></i>
+                  <p>Changer les horaires d'ouverture !</p>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </li>
+              <li class="uncompleted">
+                <div class="task_title">
+                  <i class="bx bx-x-circle"></i>
+                  <p>Changer les horaires d'ouverture !</p>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+    </div>
+    <!------------Script js------>
+    <script src="./Js/dashboard.js"></script>
+  </body>
+</html>

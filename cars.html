@@ -50,7 +50,7 @@
             <section id="cars" class="usedCars-filter">
                 <h1 class="sections-title">Nos voitures d'occasions</h1>
                 <div class="filter-cars">
-                    <article class="filter">
+                   <article class="filter">
                         <div class="filter-group">
                            <h2 class="filter-title">Kilométrage</h2>
                             <input type="hidden" id="hidden-min-km" value="16500">
@@ -93,7 +93,7 @@
                     </article>
                     <!-- Section cars-->
                     <article class="data_cars" id="car-container">
-                      <div class="card">
+                      <div class="card" data-price="26500" data-km="16500" data-year="2016">
                         <div class="card-header">
                              <img src="./assets/img/bmv.png" class="card-img-top" alt="bmv">
                             <div class="card-body">
@@ -109,7 +109,7 @@
                             </div>
                         </div>
                       </div> 
-                      <div class="card">
+                      <div class="card" data-price="25500" data-km="17000" data-year="2020">
                         <div class="card-header">
                              <img src="./assets/img/mustang.png" class="card-img-top" alt="jeep">
                             <div class="card-body">
@@ -125,14 +125,14 @@
                             </div>
                         </div>
                       </div>
-                      <div class="card">   
+                      <div class="card" data-price="23900" data-km="20500" data-year="2015">   
                         <div class="card-header">
                              <img src="./assets/img/bmw.png" class="card-img-top" alt="bmv-serie-3">
                             <div class="card-body">
                                 <h3 class="card-title">BMW Serie 3</h3>
                                     <p class="card-text">
                                         <span>Année: 2015</span><br>
-                                        <span>Disel</span><br>
+                                        <span>Diesel</span><br>
                                         <span>20.500 km</span><br>
                                         <hr>
                                     </p>
@@ -141,7 +141,7 @@
                             </div>
                         </div>
                       </div>
-                      <div class="card"> 
+                      <div class="card" data-price="80900" data-km="30500" data-year="2017"> 
                          <div class="card-header">
                              <img src="./assets/img/ferrari.jpg" class="card-img-top" alt="ferrari">
                             <div class="card-body">
@@ -157,7 +157,7 @@
                             </div>
                         </div>
                       </div> 
-                      <div class="card">  
+                      <div class="card" data-price="50000" data-km="51500" data-year="2016">  
                         <div class="card-header">
                              <img src="./assets/img/porsche.jpg" class="card-img-top" alt="porsche">
                             <div class="card-body">
@@ -173,7 +173,7 @@
                             </div>
                         </div>
                       </div>
-                      <div class="card">  
+                      <div class="card" data-price="21900" data-km="35500" data-year="2019">  
                         <div class="card-header">
                              <img src="./assets/img/hyundai.png" class="card-img-top" alt="hyindai">
                             <div class="card-body">
@@ -280,6 +280,7 @@
       </div>
     </footer>
     <!--Js-->
+
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>

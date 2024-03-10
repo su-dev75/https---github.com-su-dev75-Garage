@@ -1,174 +1,183 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Garage V.Parrot</title>
-    <link rel="icon" href="assets/img/favicon_parrot .png">
+  <title>Garage V.Parrot</title>
+  <link rel="icon" href="assets/img/favicon_parrot .png">
 
-    <!--Link css-->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./Js/jquery-ui.min.css">
+  <!--Link css-->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./Js/jquery-ui.min.css">
 
-    <!-- Links -->
-        <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-    />
+  <!-- Links -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
 </head>
-<body>
-            <!-- Header -->
-    <div class="wrapper">
-        <nav style="background-color: var(--oxford-blue-2);">
-        <div class="nav__bar">
-          <div class="logo nav__logo">
-            <a href="home.html"><img src="assets/img/logo_parrot .png" alt="logo" /></a>
-          </div>
-          <div class="nav__menu__btn" id="menu-btn">
-            <i class="ri-menu-line"></i>
-          </div>
-        </div>
-        <ul class="nav__links" id="nav-links">
-          <li><a href="home.html">Accueil</a></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </nav>
-    </div>
 
-    <main class="main">
-        <div class="wrapper">
-            <section class="connect w-min sections">
-                <h1 class="sections-title">Connexion</h1>
-                <div class="form-connect"></div>
-                <div class="connect-wrapper">
-                    <form  method="post" class="login-form" id="loginForm">
-                        <div class="connectionForm">
-                            <div class="form-group">
-                                <label for="email">Adresse e-mail</label>
-                                <input type="email" name="email" id="email" class="form-control" minlength="13" maxlength="35" autocomplete="off" placeholder="example@mail.com">
-                                <span id="mail_error" class="error"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="password">Mot de passe</label>
-                                <div class="input-group">
-                                    <input type="password" name="password" id="password" class="form-control" minlength="10" maxlength="25" autocomplete="off">
-                                </div>
-                                <span class="error" id="password_error"> </span>
-                            </div>
-                        </div>
-                        <input type="hidden" name="token" value="">
-                        <div class="btn-form">
-                            <button type="btn" id="submit" class="btn">Connecter</button>
-                        </div>
-                    </form>
+<body>
+  <!-- Header -->
+  <div class="wrapper">
+    <nav style="background-color: var(--oxford-blue-2);">
+      <div class="nav__bar">
+        <div class="logo nav__logo">
+          <a href="home.html"><img src="assets/img/logo_parrot .png" alt="logo" /></a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="home.html">Accueil</a></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Connnection form -->
+  <main class="main">
+    <div class="wrapper">
+      <section class="connect w-min sections">
+        <h1 class="sections-title">Connexion</h1>
+        <div class="form-connect"></div>
+        <div class="connect-wrapper">
+          <form action="login.php" method="post" class="login-form" id="loginForm">
+            <div class="connectionForm">
+              <div class="form-group">
+                <label for="email">Adresse e-mail</label>
+                <input type="email" name="email" id="email" class="form-control" minlength="13" maxlength="35" autocomplete="off" placeholder="example@mail.com">
+                <span id="mail_error" class="error"></span>
+              </div>
+              <div class="form-group">
+                <label for="password">Mot de passe</label>
+                <div class="input-group">
+                  <input type="password" name="password" id="password" class="form-control" minlength="10" maxlength="25" autocomplete="off">
+                  <span class="input-group-text" onclick="password_show_hide();">
+                    <i class="ri-eye-close-fill" id="show_eye"></i>
+                    <i class="ri-eye-fill d-none" id="hide_eye"></i>
+                  </span>
                 </div>
 
-            </section>
+                <span class="error" id="password_error"> </span>
+              </div>
+            </div>
+            <input type="hidden" name="token" value="">
+            <div class="btn-form">
+              <button type="btn" id="submit" class="btn">Connecter</button>
+            </div>
+          </form>
         </div>
-    </main>
-    <!-- Connnection form -->
 
-     <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-top">
-        <div class="footer_col">
-          <div class="footer-brand">
-            <a href="#" class="logo">
-              <img src="./assets/img/logo_parrot .png" alt="logo_parrot">
-            </a>
-          </div>  
-            <p class="description">
-              Garage V. Parrot, le meilleur solution pour votre voiture
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer_col">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <img src="./assets/img/logo_parrot .png" alt="logo_parrot">
+          </a>
+        </div>
+        <p class="description">
+          Garage V. Parrot, le meilleur solution pour votre voiture
+        </p>
+
+        <ul class="footer__socials">
+          <li>
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-twitter-fill"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-instagram-line"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer_col">
+        <h3>Horaires</h3>
+        <ul class="footer-list">
+          <li>
+            <p class="p">Lundi – Vendredi</p>
+            <span class="span">08.45 – 12.00</span><br>
+            <span class="span">14.00 – 18.00</span>
+          </li>
+
+          <li>
+            <p class="p">Samedi –
+            <p>
+              <span class="span">08.45 – 12.00</span>
+          </li>
+
+          <li>
+            <p class="p">Dimanche – Fermé</p>
+
+          </li>
+
+        </ul>
+      </div>
+      <div class="footer_col">
+        <h3>Contact Info</h3>
+        <ul class="footer-list">
+          <li>
+            <p>
+              <span class="span">+33 5 55 77 75 55</span>
             </p>
+          </li>
 
-           <ul class="footer__socials">
-             <li>
-              <a href="#"><i class="ri-facebook-fill"></i></a>
-             </li>
-             <li>
-              <a href="#"><i class="ri-twitter-fill"></i></a>
-             </li>
-             <li>
-              <a href="#"><i class="ri-instagram-line"></i></a>
-             </li>
-           </ul>
-          </div>
-          <div class="footer_col">
-            <h3>Horaires</h3>
-           <ul class="footer-list">
-              <li>
-                <p class="p">Lundi – Vendredi</p>
-                <span class="span">08.45 – 12.00</span><br>
-                <span class="span">14.00 – 18.00</span>
-              </li>
+          <li>
+            <p>
+              <span class="span">parrot@service.fr</span>
+            </p>
+          </li>
 
-              <li>
-                <p class="p">Samedi – <p>
-                <span class="span">08.45 – 12.00</span>
-              </li>
-
-              <li>
-                <p class="p">Dimanche – Fermé</p>
-              
-              </li>
-
-             </ul>
-          </div>
-          <div class="footer_col">
-            <h3>Contact Info</h3>
-          <ul class="footer-list">
-              <li>
-                <p>
-                  <span class="span">+33 5 55 77 75 55</span>
-                </p>
-              </li>
-
-              <li>
-                <p>
-                  <span class="span">parrot@service.fr</span>
-                </p>
-              </li>
-
-               <li>
-                 <p>
-                  <span class="span">21 Rue Bayard</span>
-                 </p>
-                </li>
-                <li>
-                  <p>
-                    <span>31000, Toulouse</span>
-                  </p>
-                </li>
-            </ul>
-          </div>
-        </div>
+          <li>
+            <p>
+              <span class="span">21 Rue Bayard</span>
+            </p>
+          </li>
+          <li>
+            <p>
+              <span>31000, Toulouse</span>
+            </p>
+          </li>
+        </ul>
       </div>
-      <div class="footer-bottom">
-        <div class="container">
-          <p class="copyright">Copyright 2024, Tous droits réservés. Développé par Salza.u</p>
-        </div>
+    </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">Copyright 2024, Tous droits réservés. Développé par Salza.u</p>
       </div>
-    </footer>
-    <!--Js-->
+    </div>
+  </footer>
+  <!--Js-->
 
-     <script>
-      var myButton = document.querySelector("#submit");
+  <script>
+    function password_show_hide() {
+      let password = document.getElementById('password')
+      let show_eye = document.getElementById('show_eye')
+      let hide_eye = document.getElementById('hide_eye')
+      hide_eye.classList.remove('d-none')
+      if (password.type === 'password') {
+        password.type = 'text'
+        show_eye.style.display = 'none'
+        hide_eye.style.display = 'block'
+      } else {
+        password.type = 'password'
+        show_eye.style.display = 'block'
+        hide_eye.style.display = 'none'
+      }
+    }
+  </script>
 
-          myButton.onclick = function () {
-         alert("Page en construction !");
-      };
-
-    </script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="./Js/login.js"></script>
-    <script src="./Js/script.js"></script>
-    <script src="./Js/jquery-3.7.1.min.js"></script>  
 </body>
+
+</html>
