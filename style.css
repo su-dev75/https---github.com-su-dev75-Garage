@@ -449,9 +449,10 @@ nav {
   padding-block: 20px;
 }
 
-.copyright {
+.copyright a {
   text-align: center;
   font-size: 1rem;
+  color: var(--cadet-blue-creyola);
 }
 
 .footer-top {
@@ -515,7 +516,6 @@ nav {
 }
 
 /*-- Used cars page--*/
-
 .usedCars-filter {
   width: 100%;
   padding: 20px;
@@ -524,7 +524,6 @@ nav {
 .usedCars-filter .sections-title {
   margin-top: 150px;
 }
-
 .filter {
   display: flex;
   -webkit-box-align: center;
@@ -536,45 +535,7 @@ nav {
   width: 100%;
   margin: 0 auto;
 }
-.filter-group {
-  margin: 10px 0;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  font-weight: 300;
-  font-size: 0.7rem;
-  font-family: "Poppins", sans-serif;
-}
-.mb-2 .my-2 {
-  margin-bottom: 0.5rem !important;
-}
-#km_range,
-#price_range,
-#year_range {
-  width: 200px;
-}
 
-.ui-state-default,
-.ui-widget-content .ui-state-default {
-  border: 2px solid var(--oxford-blue-1);
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-}
-.filter-group p {
-  font-size: 0.9rem;
-  font-weight: 400;
-  margin-top: 10px;
-}
 .btn-filter {
   display: inline-block;
   width: 120px;
@@ -922,20 +883,6 @@ span.error {
     margin: 0 auto;
   }
 
-  .filter-group {
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    margin: 10px 0;
-    width: 100%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-    font-weight: 400;
-    font-size: 0.9rem;
-  }
-
   /* -- Connection --*/
 
   .connect-wrapper {
@@ -1275,11 +1222,11 @@ span.error {
     font-size: 1.3rem;
   }
 
+  .copyright a {
+    font-size: 1.4rem;
+  }
   /*-- Used cars page --*/
 
-  .filter-group {
-    font-size: 1rem;
-  }
   .data_cars {
     display: flex;
     flex-wrap: wrap;

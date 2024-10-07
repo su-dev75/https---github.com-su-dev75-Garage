@@ -49,51 +49,54 @@
         <!-- Section filter-->
             <section id="cars" class="usedCars-filter">
                 <h1 class="sections-title">Nos voitures d'occasions</h1>
-                <div class="filter-cars">
-                   <article class="filter">
-                        <div class="filter-group">
-                           <h2 class="filter-title">Kilométrage</h2>
-                            <input type="hidden" id="hidden-min-km" value="16500">
-                            <input type="hidden" id="hidden-max-km" value="51500">  
-                            <div id="km_range" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
-                            <div class="ui-slider-range ui-corner-all ui-widget-header"   style="width: 100%; left: 0%;">
-                            </div>
-                                <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span>
-                                <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span>
-                            </div>
-                            <p id="km_show" class="mb-2">16500km - 51500km</p>
-                            <button type="button" id="reset-button-k" class="btn-filter">Réinitialiser</button> 
-                        </div>
-                        <div class="filter-group">  
-                            <h2 class="filter-title">Prix</h2>
-                            <input type="hidden" id="hidden-min-price" value="21900€">
-                            <input type="hidden" id="hidden-max-price" value="80900€">
-                            <div id="price_range" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
-                             <div class="ui-slider-range ui-corner-all ui-widget-header" style="width: 100%; left: 0%;">
-                             </div>
-                                <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span>
-                                <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span>
-                            </div>  
-                            <p id="price_show" class="mb-2">21900€ - 80900€</p>
-                             <button type="button" id="reset-button-p" class="btn-filter">Réinitialiser</button> 
-                        </div> 
-                        <div class="filter-group">
-                            <h2 class="filter-title">Années</h2>
-                           <input type="hidden" id="hidden-min-year" value="2015">
-                            <input type="hidden" id="hidden-max-year" value="2020">
-                            <div id="year_range" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
-                                <div class="ui-slider-range ui-corner-all ui-widget-header" style="width: 100%; left: 0%;">
-                                </div>
-                                <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span>
-                                <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span>
-                            </div> 
-                            <p id="year_show" class="mb-2">2015 - 2020</p>
-                              <button type="button" id="reset-button-y" class="btn-filter">Réinitialiser</button>  
-                        </div>
-                    </article>
+                <article class="filter">
+                  <div class="filter-cars">
+                   
+                    <!-- Formulaire de filtrage -->
+
+                    <form id="filterForm">
+                      <label>
+                         <input type="checkbox" name="brand" value="BMW" /> BMW
+                      </label>
+                      <label>
+                         <input type="checkbox" name="brand" value="Mustang" /> Mustang
+                      </label>
+                      <label>
+                         <input type="checkbox" name="brand" value="Ferrari" /> Ferrari </label>
+                      <label>
+                         <input type="checkbox" name="brand" value="Hyundai" /> Hyundai
+                      </label>
+                      <br>
+                      <label>
+                           Prix maximum: 
+                          <input type="number" name="maxPrice" id="maxPrice" min="0" />
+                          
+                      </label>
+
+                      <label>
+                          Kilomètres maximum: 
+                         <input type="number" name="maxMileage" id="maxMileage" min="0" />
+                         
+                      </label>
+
+                      <label>
+                          Année minimum:
+                           <input type="number" name="minYear" id="minYear" min="0" />
+                            
+                      </label>
+
+                      <!-- Bouton de réinitialisation -->
+                        <button type="button" class="btn-filter" onclick="resetFilters()">Réinitialiser</button>
+
+                    </form>
+
+                  </div>
+                </article>
                     <!-- Section cars-->
                     <article class="data_cars" id="car-container">
-                      <div class="card" data-price="26500" data-km="16500" data-year="2016">
+                      <div class="card" id="carList">
+                      <div 
+                      class="car" data-brand="BMW" data-price="26500" data-mileage="16500" data-year="2016">
                         <div class="card-header">
                              <img src="./assets/img/bmv.png" class="card-img-top" alt="bmv">
                             <div class="card-body">
@@ -108,8 +111,10 @@
                                     <a href="#" class="btn-car">Détails</a>
                             </div>
                         </div>
-                      </div> 
-                      <div class="card" data-price="25500" data-km="17000" data-year="2020">
+                        </div>
+                      </div>
+                      <div class="card" id="carList"> 
+                      <div class="car" data-brand="Mustang" data-price="25500" data-mileage="17000" data-year="2020">
                         <div class="card-header">
                              <img src="./assets/img/mustang.png" class="card-img-top" alt="jeep">
                             <div class="card-body">
@@ -125,7 +130,9 @@
                             </div>
                         </div>
                       </div>
-                      <div class="card" data-price="23900" data-km="20500" data-year="2015">   
+                      </div>
+                      <div class="card" id="carList">
+                      <div class="car" data-brand="BMW" data-price="23900" data-mileage="20500" data-year="2015">   
                         <div class="card-header">
                              <img src="./assets/img/bmw.png" class="card-img-top" alt="bmv-serie-3">
                             <div class="card-body">
@@ -141,7 +148,9 @@
                             </div>
                         </div>
                       </div>
-                      <div class="card" data-price="80900" data-km="30500" data-year="2017"> 
+                      </div>
+                      <div class="card" id="carList">
+                      <div class="car" data-brand="Ferrari" data-price="80900" data-mileage="30500" data-year="2017"> 
                          <div class="card-header">
                              <img src="./assets/img/ferrari.jpg" class="card-img-top" alt="ferrari">
                             <div class="card-body">
@@ -157,11 +166,13 @@
                             </div>
                         </div>
                       </div> 
-                      <div class="card" data-price="50000" data-km="51500" data-year="2016">  
+                      </div>
+                      <div class="card" id="carList">
+                      <div class="car" data-brand="Hyundai" data-price="50000" data-mileage="51500" data-year="2016">  
                         <div class="card-header">
                              <img src="./assets/img/porsche.jpg" class="card-img-top" alt="porsche">
                             <div class="card-body">
-                                <h3 class="card-title">PORSCHE 911</h3>
+                                <h3 class="card-title">HYUNDAI</h3>
                                     <p class="card-text">
                                         <span>Année: 2016</span><br>
                                         <span>Essence</span><br>
@@ -173,7 +184,9 @@
                             </div>
                         </div>
                       </div>
-                      <div class="card" data-price="21900" data-km="35500" data-year="2019">  
+                      </div>
+                      <div class="card"  id="carList">
+                      <div class="car" data-brand="Hyundai" data-price="21900" data-mileage="35500" data-year="2019">  
                         <div class="card-header">
                              <img src="./assets/img/hyundai.png" class="card-img-top" alt="hyindai">
                             <div class="card-body">
@@ -188,6 +201,7 @@
                                     <a href="#" class="btn-car">Détails</a>
                             </div>
                         </div>
+                      </div>
                       </div>
                     </article>
                 </div>
@@ -287,5 +301,6 @@
     <script src="./Js/script.js"></script>
     <script src="./Js/jquery-3.7.1.min.js"></script>
     <script src="./Js/jquery-ui.min.js"></script>
+    <script src=".Js/cars_filter.js"></script>
 </body>
 </html>
